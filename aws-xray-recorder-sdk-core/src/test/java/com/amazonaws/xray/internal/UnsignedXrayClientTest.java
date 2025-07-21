@@ -28,13 +28,15 @@ import static com.github.tomakehurst.wiremock.client.WireMock.verify;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static java.util.Arrays.asList;
 
-import com.amazonaws.services.xray.model.GetSamplingRulesRequest;
-import com.amazonaws.services.xray.model.GetSamplingRulesResult;
-import com.amazonaws.services.xray.model.GetSamplingTargetsRequest;
-import com.amazonaws.services.xray.model.GetSamplingTargetsResult;
-import com.amazonaws.services.xray.model.SamplingStatisticsDocument;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.github.tomakehurst.wiremock.junit.WireMockClassRule;
+import java.util.List;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -222,9 +224,10 @@ public class UnsignedXrayClientTest {
                                                  .withStatus(200)
                                                  .withBody(SAMPLING_RULES)));
 
-        GetSamplingRulesResult result = client.getSamplingRules(new GetSamplingRulesRequest());
+        GetSamplingRulesRequest request = GetSamplingRulesRequest.create(null);
+        GetSamplingRulesResponse result = client.getSamplingRules(request);
 
-        GetSamplingRulesResult expected = OBJECT_MAPPER.readValue(SAMPLING_RULES, GetSamplingRulesResult.class);
+        GetSamplingRulesResponse expected = OBJECT_MAPPER.readValue(SAMPLING_RULES, GetSamplingRulesResponse.class);
         assertThat(expected).isEqualTo(result);
 
         verify(postRequestedFor(urlEqualTo("/GetSamplingRules"))
@@ -238,12 +241,13 @@ public class UnsignedXrayClientTest {
                                                  .withStatus(200)
                                                  .withBody(SAMPLING_TARGETS)));
 
-        GetSamplingTargetsRequest request = new GetSamplingTargetsRequest()
-            .withSamplingStatisticsDocuments(new SamplingStatisticsDocument().withClientID("client-id"));
+        List<SamplingStatisticsDocument> documents = asList(
+            GetSamplingTargetsRequest.SamplingStatisticsDocument.newBuilder().setClientId("client-id").build());
+        GetSamplingTargetsRequest request = GetSamplingTargetsRequest.create(documents);
 
-        GetSamplingTargetsResult result = client.getSamplingTargets(request);
+        GetSamplingTargetsResponse result = client.getSamplingTargets(request);
 
-        GetSamplingTargetsResult expected = OBJECT_MAPPER.readValue(SAMPLING_TARGETS, GetSamplingTargetsResult.class);
+        GetSamplingTargetsResponse expected = OBJECT_MAPPER.readValue(SAMPLING_TARGETS, GetSamplingTargetsResponse.class);
         assertThat(expected).isEqualTo(result);
 
         verify(postRequestedFor(urlEqualTo("/SamplingTargets"))
@@ -265,7 +269,7 @@ public class UnsignedXrayClientTest {
                                                  .withStatus(500)
                                                  .withBody(expectedMessage)));
 
-        assertThatThrownBy(() -> client.getSamplingRules(new GetSamplingRulesRequest()))
+        assertThatThrownBy(() -> client.getSamplingRules(GetSamplingRulesRequest.create(null)))
                 .isInstanceOf(XrayClientException.class)
                 .hasMessageContaining(expectedMessage);
     }
@@ -275,7 +279,7 @@ public class UnsignedXrayClientTest {
     public void cannotSend() {
         client = new UnsignedXrayClient("http://localhost:" + (server.port() + 1234));
 
-        assertThatThrownBy(() -> client.getSamplingRules(new GetSamplingRulesRequest()))
+        assertThatThrownBy(() -> client.getSamplingRules(GetSamplingRulesRequest.create(null)))
                 .isInstanceOf(XrayClientException.class)
                 .hasMessageContaining("Could not serialize and send request");
     }

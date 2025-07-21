@@ -15,14 +15,13 @@
 
 package com.amazonaws.xray.internal;
 
-import com.amazonaws.AmazonWebServiceRequest;
-import com.amazonaws.AmazonWebServiceResult;
-import com.amazonaws.SdkClientException;
-import com.amazonaws.services.xray.model.GetSamplingRulesRequest;
-import com.amazonaws.services.xray.model.GetSamplingRulesResult;
-import com.amazonaws.services.xray.model.GetSamplingTargetsRequest;
-import com.amazonaws.services.xray.model.GetSamplingTargetsResult;
+// import com.amazonaws.AmazonWebServiceRequest;
+// import com.amazonaws.AmazonWebServiceResult;
 import com.amazonaws.xray.config.DaemonConfiguration;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -72,8 +71,14 @@ public class UnsignedXrayClient {
                     // This is a somewhat hacky way of having ObjectMapper only serialize the fields in our
                     // model classes instead of the base class that comes from the SDK. In the future, we will
                     // remove the SDK dependency itself and the base classes and this hack will go away.
-                    if (m.getDeclaringClass() == AmazonWebServiceRequest.class ||
-                        m.getDeclaringClass() == AmazonWebServiceResult.class) {
+                    // if (m.getDeclaringClass() == AmazonWebServiceRequest.class ||
+                    //     m.getDeclaringClass() == AmazonWebServiceResult.class) {
+                    //     return true;
+                    // }
+                    // Ignore AWS SDK v2 classes (they are under software.amazon.awssdk.*)
+                    Package declaringPackage = m.getDeclaringClass().getPackage();
+                    if (declaringPackage != null &&
+                        declaringPackage.getName().startsWith("software.amazon.awssdk.")) {
                         return true;
                     }
                     return super.hasIgnoreMarker(m);
@@ -109,12 +114,12 @@ public class UnsignedXrayClient {
         }
     }
 
-    public GetSamplingRulesResult getSamplingRules(GetSamplingRulesRequest request) {
-        return sendRequest(getSamplingRulesEndpoint, request, GetSamplingRulesResult.class);
+    public GetSamplingRulesResponse getSamplingRules(GetSamplingRulesRequest request) {
+        return sendRequest(getSamplingRulesEndpoint, request, GetSamplingRulesResponse.class);
     }
 
-    public GetSamplingTargetsResult getSamplingTargets(GetSamplingTargetsRequest request) {
-        return sendRequest(getSamplingTargetsEndpoint, request, GetSamplingTargetsResult.class);
+    public GetSamplingTargetsResponse getSamplingTargets(GetSamplingTargetsRequest request) {
+        return sendRequest(getSamplingTargetsEndpoint, request, GetSamplingTargetsResponse.class);
     }
 
     private <T> T sendRequest(URL endpoint, Object request, Class<T> responseClass) {
@@ -216,7 +221,7 @@ public class UnsignedXrayClient {
                 BigDecimal dateValue = new BigDecimal(dateString);
                 return new Date(dateValue.scaleByPowerOfTen(AWS_DATE_MILLI_SECOND_PRECISION).longValue());
             } catch (NumberFormatException nfe) {
-                throw new SdkClientException("Unable to parse date : " + dateString, nfe);
+                throw new IllegalArgumentException("Unable to parse date : " + dateString, nfe);
             }
         }
     }

@@ -15,9 +15,9 @@
 
 package com.amazonaws.xray.strategy.sampling.rule;
 
-import com.amazonaws.services.xray.model.SamplingRule;
-import com.amazonaws.services.xray.model.SamplingStatisticsDocument;
-import com.amazonaws.services.xray.model.SamplingTargetDocument;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.SamplingResponse;
 import com.amazonaws.xray.strategy.sampling.rand.Rand;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
@@ -48,10 +48,10 @@ public class CentralizedRuleTest {
     public void testPositiveSampleTake() {
         Clock clock = Clock.fixed(Instant.ofEpochSecond(1500000000), ZoneId.systemDefault());
 
-        SamplingRule input = createInput("r1", 300, 10, 0.0);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule rule = new CentralizedRule(input, new RandImpl());
 
-        SamplingTargetDocument target = createTarget(2, 0.0, 1500000010);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(2, 0.0, 1500000010);
         rule.update(target, clock.instant());
 
         SamplingResponse response = rule.sample(clock.instant());
@@ -70,12 +70,12 @@ public class CentralizedRuleTest {
     public void testPositiveBernoulliSample() {
         Clock clock = Clock.fixed(Instant.ofEpochSecond(1500000000), ZoneId.systemDefault());
 
-        SamplingRule input = createInput("r1", 300, 10, 0.0);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule rule = new CentralizedRule(input, rand);
 
         Mockito.when(rand.next()).thenReturn(0.01);
 
-        SamplingTargetDocument target = createTarget(0, 0.05, 1500000010);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(0, 0.05, 1500000010);
         rule.update(target, clock.instant());
 
         // Sample using bernoulli sampling
@@ -95,10 +95,10 @@ public class CentralizedRuleTest {
     public void testExpiredReservoirPositiveBernoulliSample() {
         Clock clock = Clock.fixed(Instant.ofEpochSecond(1500000000), ZoneId.systemDefault());
 
-        SamplingRule input = createInput("r1", 300, 0, 0.5);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 0, 0.5);
         CentralizedRule rule = new CentralizedRule(input, rand);
 
-        SamplingTargetDocument target = createTarget(0, 0.5, 1499999999);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(0, 0.5, 1499999999);
         rule.update(target, clock.instant());
 
         Mockito.when(rand.next()).thenReturn(0.2);
@@ -121,10 +121,10 @@ public class CentralizedRuleTest {
     public void testNegativeSample() {
         Clock clock = Clock.fixed(Instant.ofEpochSecond(1500000000), ZoneId.systemDefault());
 
-        SamplingRule input = createInput("r1", 300, 10, 0.0);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule rule = new CentralizedRule(input, rand);
 
-        SamplingTargetDocument target = createTarget(0, 0.0, 1500000010);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(0, 0.0, 1500000010);
         rule.update(target, clock.instant());
 
         SamplingResponse response = rule.sample(clock.instant());
@@ -143,10 +143,10 @@ public class CentralizedRuleTest {
     public void testExpiredReservoirNegativeBernoulliSample() {
         Clock clock = Clock.fixed(Instant.ofEpochSecond(1500000000), ZoneId.systemDefault());
 
-        SamplingRule input = createInput("r1", 300, 0, 0.2);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 0, 0.2);
         CentralizedRule rule = new CentralizedRule(input, rand);
 
-        SamplingTargetDocument target = createTarget(0, 0.2, 1499999999);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(0, 0.2, 1499999999);
         rule.update(target, clock.instant());
 
         Mockito.when(rand.next()).thenReturn(0.4);
@@ -167,10 +167,10 @@ public class CentralizedRuleTest {
     public void testReservoirReset() {
         Mockito.when(clock.instant()).thenReturn(Instant.ofEpochSecond(1500000000));
 
-        SamplingRule input = createInput("r1", 300, 10, 0.0);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule rule = new CentralizedRule(input, new RandImpl());
 
-        SamplingTargetDocument target = createTarget(2, 0.0, 1500000010);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(2, 0.0, 1500000010);
         rule.update(target, clock.instant());
 
         rule.sample(clock.instant());
@@ -191,10 +191,10 @@ public class CentralizedRuleTest {
     public void testSnapshot() {
         Clock clock = Clock.fixed(Instant.ofEpochSecond(1500000000), ZoneId.systemDefault());
 
-        SamplingRule input = createInput("r1", 300, 10, 0.0);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule rule = new CentralizedRule(input, new RandImpl());
 
-        SamplingTargetDocument target = createTarget(2, 0.0, 1500000010);
+        GetSamplingTargetsResponse.SamplingTargetDocument target = createTarget(2, 0.0, 1500000010);
         rule.update(target, clock.instant());
 
         rule.sample(clock.instant());
@@ -206,33 +206,27 @@ public class CentralizedRuleTest {
         Assert.assertEquals(1, s.getRequests());
         Assert.assertEquals(0, s.getBorrowed());
 
-        SamplingStatisticsDocument snapshot = rule.snapshot(Date.from(clock.instant()));
+        GetSamplingTargetsRequest.SamplingStatisticsDocument snapshot = rule.snapshot(Date.from(clock.instant()));
 
         // Assert snapshot contains expected statistics
         Assert.assertEquals("r1", snapshot.getRuleName());
         Assert.assertEquals(TimeUnit.SECONDS.toMillis(1500000000), snapshot.getTimestamp().toInstant().toEpochMilli());
-        Assert.assertEquals(1, snapshot.getRequestCount().intValue());
-        Assert.assertEquals(1, snapshot.getSampledCount().intValue());
-        Assert.assertEquals(0, snapshot.getBorrowCount().intValue());
+        Assert.assertEquals(1, snapshot.getRequestCount());
+        Assert.assertEquals(1, snapshot.getSampledCount());
+        Assert.assertEquals(0, snapshot.getBorrowCount());
 
         // Assert current statistics are empty
-        Assert.assertEquals(0, rule.snapshot(Date.from(clock.instant())).getRequestCount().intValue());
-        Assert.assertEquals(0, rule.snapshot(Date.from(clock.instant())).getSampledCount().intValue());
-        Assert.assertEquals(0, rule.snapshot(Date.from(clock.instant())).getBorrowCount().intValue());
+        Assert.assertEquals(0, rule.snapshot(Date.from(clock.instant())).getRequestCount());
+        Assert.assertEquals(0, rule.snapshot(Date.from(clock.instant())).getSampledCount());
+        Assert.assertEquals(0, rule.snapshot(Date.from(clock.instant())).getBorrowCount());
     }
 
     @Test
     public void testRuleUpdateWithInvalidation() {
-        SamplingRule input = createInput("r1", 300, 10, 0.0)
-                .withHTTPMethod("POST")
-                .withServiceName("s1")
-                .withURLPath("/foo/bar");
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0, "POST", "s1", "/foo/bar");
         CentralizedRule r = new CentralizedRule(input, new RandImpl());
 
-        SamplingRule update = createInput("r1", 301, 5, 0.5)
-                .withHTTPMethod("GET")
-                .withServiceName("s2")
-                .withURLPath("/bar/foo");
+        GetSamplingRulesResponse.SamplingRule update = createInput("r1", 300, 10, 0.0, "GET", "s2", "/bar/foo");
         boolean invalidate = r.update(update);
 
         Matchers m = Whitebox.getInternalState(r, "matchers", CentralizedRule.class);
@@ -245,16 +239,10 @@ public class CentralizedRuleTest {
 
     @Test
     public void testRuleUpdateWithoutInvalidation() {
-        SamplingRule input = createInput("r1", 300, 10, 0.0)
-                .withHTTPMethod("POST")
-                .withServiceName("s1")
-                .withURLPath("/foo/bar");
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0, "POST", "s1", "/foo/bar");
         CentralizedRule r = new CentralizedRule(input, new RandImpl());
 
-        SamplingRule update = createInput("r1", 300, 10, 0.0)
-                .withHTTPMethod("GET")
-                .withServiceName("s2")
-                .withURLPath("/bar/foo");
+        GetSamplingRulesResponse.SamplingRule update = createInput("r1", 300, 10, 0.0, "GET", "s2", "/bar/foo");
         boolean invalidate = r.update(update);
 
         Matchers m = Whitebox.getInternalState(r, "matchers", CentralizedRule.class);
@@ -267,13 +255,14 @@ public class CentralizedRuleTest {
 
     @Test
     public void testTargetUpdate() {
-        SamplingRule input = createInput("r1", 300, 10, 0.0);
+        GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule r = new CentralizedRule(input, new RandImpl());
 
-        SamplingTargetDocument update = new SamplingTargetDocument()
-                .withRuleName("r1")
-                .withFixedRate(0.5)
-                .withInterval(20);
+        GetSamplingTargetsResponse.SamplingTargetDocument update = GetSamplingTargetsResponse.SamplingTargetDocument.create(0.5, 20, null, null, "r1");
+            // .ruleName("r1")
+            // .fixedRate(0.5)
+            // .interval(20)
+            // .build();
 
         r.update(update, Instant.now());
 
@@ -282,22 +271,32 @@ public class CentralizedRuleTest {
         Assert.assertEquals(0.5, fixedRate, 0);
     }
 
-    public static SamplingRule createInput(String name, int priority, int capacity, double rate) {
-        SamplingRule input = new SamplingRule()
-                .withRuleName(name)
-                .withPriority(priority)
-                .withFixedRate(rate)
-                .withReservoirSize(capacity);
+    public static GetSamplingRulesResponse.SamplingRule createInput(String name, int priority, int capacity, double rate) {
+        return createInput(name, priority, capacity, rate, "", "", "");
+    }
+
+    public static GetSamplingRulesResponse.SamplingRule createInput(String name, int priority, int capacity, double rate,
+        String httpMethod, String serviceName, String urlPath) {
+        GetSamplingRulesResponse.SamplingRule input = GetSamplingRulesResponse.SamplingRule.create(null, rate, null, httpMethod, priority, capacity, null, null, name, serviceName, null, urlPath, null);
+            // .ruleName(name)
+            // .priority(priority)
+            // .fixedRate(rate)
+            // .reservoirSize(capacity)
+            // .httpMethod(httpMethod)
+            // .serviceName(serviceName)
+            // .urlPath(ulrPath)
+            // .build();
 
         return input;
     }
 
-    public static SamplingTargetDocument createTarget(int quota, double rate, long expiresAt) {
-        SamplingTargetDocument target = new SamplingTargetDocument()
-                .withReservoirQuota(quota)
-                .withReservoirQuotaTTL(Date.from(Instant.ofEpochSecond(expiresAt)))
-                .withFixedRate(rate)
-                .withInterval(10);
+    public static GetSamplingTargetsResponse.SamplingTargetDocument createTarget(int quota, double rate, long expiresAt) {
+        GetSamplingTargetsResponse.SamplingTargetDocument target = GetSamplingTargetsResponse.SamplingTargetDocument.create(rate, 10, quota, Date.from(Instant.ofEpochSecond(expiresAt)), null);
+            // .reservoirQuota(quota)
+            // .reservoirQuotaTTL(Date.from(Instant.ofEpochSecond(expiresAt)).toInstant())
+            // .fixedRate(rate)
+            // .interval(10)
+            // .build();
 
         return target;
     }

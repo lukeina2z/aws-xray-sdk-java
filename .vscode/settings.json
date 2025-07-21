@@ -1,0 +1,18 @@
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home",
+      "default": true
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.test.config": [
+    {
+      "name": "Default",
+      "workingDirectory": "${workspaceFolder}",
+      "vmArgs": "--enable-preview"
+    }
+  ],
+  "java.configuration.updateBuildConfiguration": "interactive"
+}

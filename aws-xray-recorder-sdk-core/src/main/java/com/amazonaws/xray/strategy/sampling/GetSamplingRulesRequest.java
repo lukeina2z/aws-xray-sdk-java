@@ -15,22 +15,20 @@
 
 package com.amazonaws.xray.strategy.sampling;
 
-/**
- * @deprecated aws-xray-recorder only supports communicating with the X-Ray daemon, which does not
- * require the usual AWS API signatures so we have stopped using the SDK X-Ray client.
- */
-@Deprecated
-public final class XRayClient {
-    private XRayClient() {
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.google.auto.value.AutoValue;
+import javax.annotation.Nullable;
+
+@AutoValue
+@JsonSerialize(as = GetSamplingRulesRequest.class)
+public abstract class GetSamplingRulesRequest {
+
+    public static GetSamplingRulesRequest create(@Nullable String nextToken) {
+        return new AutoValue_GetSamplingRulesRequest(nextToken);
     }
 
-    /**
-     *
-     * @deprecated aws-xray-recorder only supports communicating with the X-Ray daemon, which does
-     * not require the usual AWS API signatures so we have stopped using the SDK X-Ray client.
-     */
-    @Deprecated
-    public static Object newClient() {
-        return new Object();
-    }
+    @JsonProperty("NextToken")
+    @Nullable
+    abstract String getNextToken();
 }

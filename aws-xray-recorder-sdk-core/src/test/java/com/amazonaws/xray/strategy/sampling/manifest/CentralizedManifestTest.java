@@ -15,8 +15,10 @@
 
 package com.amazonaws.xray.strategy.sampling.manifest;
 
-import com.amazonaws.services.xray.model.SamplingRule;
-import com.amazonaws.services.xray.model.SamplingStatisticsDocument;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
 import com.amazonaws.xray.strategy.sampling.rule.CentralizedRule;
@@ -51,7 +53,7 @@ class CentralizedManifestTest {
         Instant now = Instant.ofEpochSecond(1500000000);
 
         CentralizedManifest manifest = new CentralizedManifest();
-        SamplingRule r1 = rule("r1");
+        GetSamplingRulesResponse.SamplingRule r1 = rule(new RuleParams("r1"));
         manifest.putRules(Arrays.asList(r1), now);
 
         Assertions.assertFalse(manifest.isExpired(now));
@@ -62,7 +64,7 @@ class CentralizedManifestTest {
         Instant now = Instant.ofEpochSecond(1500000000);
 
         CentralizedManifest manifest = new CentralizedManifest();
-        SamplingRule r1 = rule("r1");
+        GetSamplingRulesResponse.SamplingRule r1 = rule(new RuleParams("r1"));
         manifest.putRules(Arrays.asList(r1), now);
 
         // Increment time to be one second past expiration
@@ -77,17 +79,18 @@ class CentralizedManifestTest {
 
         CentralizedManifest manifest = new CentralizedManifest();
 
-        SamplingRule r1 = new SamplingRule()
-            .withRuleName("r1")
-            .withPriority(10)
-            .withReservoirSize(20)
-            .withFixedRate(0.05)
-            .withHost("*")
-            .withServiceName("*")
-            .withHTTPMethod("*")
-            .withURLPath("*")
-            .withResourceARN("*")
-            .withServiceType("*");
+        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
+            .ruleName("r1")
+            .priority(10)
+            .reservoirSize(20)
+            .fixedRate(0.05)
+            .host("*")
+            .serviceName("*")
+            .httpMethod("*")
+            .urlPath("*")
+            .resourceARN("*")
+            .serviceType("*")
+            .build();
 
         manifest.putRules(Arrays.asList(r1), now);
 
@@ -111,12 +114,13 @@ class CentralizedManifestTest {
 
         CentralizedManifest manifest = new CentralizedManifest();
 
-        SamplingRule r2 = new SamplingRule()
-            .withRuleName(CentralizedRule.DEFAULT_RULE_NAME)
-            .withReservoirSize(20)
-            .withFixedRate(0.05);
+        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.builder()
+            .ruleName(CentralizedRule.DEFAULT_RULE_NAME)
+            .reservoirSize(20)
+            .fixedRate(0.05)
+            .build();
 
-        manifest.putRules(Arrays.asList(rule("r1"), r2), now);
+        manifest.putRules(Arrays.asList(rule(new RuleParams("r1")), r2), now);
 
         // Request that matches against the default rule
         SamplingRequest req = new SamplingRequest(
@@ -140,17 +144,18 @@ class CentralizedManifestTest {
         CentralizedManifest manifest = new CentralizedManifest();
 
         // Liberal sampling rule
-        SamplingRule r1 = new SamplingRule()
-            .withRuleName("r1")
-            .withPriority(10)
-            .withReservoirSize(20)
-            .withFixedRate(0.05)
-            .withHost("*")
-            .withServiceName("*")
-            .withHTTPMethod("*")
-            .withURLPath("*")
-            .withResourceARN("*")
-            .withServiceType("*");
+        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
+            .ruleName("r1")
+            .priority(10)
+            .reservoirSize(20)
+            .fixedRate(0.05)
+            .host("*")
+            .serviceName("*")
+            .httpMethod("*")
+            .urlPath("*")
+            .resourceARN("*")
+            .serviceType("*")
+            .build();
 
         manifest.putRules(Arrays.asList(r1), now);
 
@@ -172,10 +177,10 @@ class CentralizedManifestTest {
     void testRebuildOnNewRule() {
         CentralizedManifest manifest = new CentralizedManifest();
 
-        manifest.putRules(Arrays.asList(rule("r1")), Instant.now());
+        manifest.putRules(Arrays.asList(rule(new RuleParams("r1"))), Instant.now());
         Map<String, CentralizedRule> rules1 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
 
-        manifest.putRules(Arrays.asList(rule("r1"), rule("r2")), Instant.now());
+        manifest.putRules(Arrays.asList(rule(new RuleParams("r1")), rule(new RuleParams("r2"))), Instant.now());
         Map<String, CentralizedRule> rules2 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
 
         // The map of rules should be rebuilt, resulting in a new object
@@ -189,10 +194,12 @@ class CentralizedManifestTest {
     void testPutRulesWithoutRebuild() {
         CentralizedManifest manifest = new CentralizedManifest();
 
-        manifest.putRules(Arrays.asList(rule("r1")), Instant.now());
+        manifest.putRules(Arrays.asList(rule(new RuleParams("r1"))), Instant.now());
         Map<String, CentralizedRule> rules1 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
 
-        SamplingRule r = rule("r1").withResourceARN("arn3");
+        RuleParams params = new RuleParams("r1");
+        params.resourceArn = "arn3";
+        GetSamplingRulesResponse.SamplingRule r = rule(params);
 
         manifest.putRules(Arrays.asList(r), Instant.now());
         Map<String, CentralizedRule> rules2 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
@@ -205,10 +212,13 @@ class CentralizedManifestTest {
     void testRebuildOnPriorityChange() {
         CentralizedManifest manifest = new CentralizedManifest();
 
-        manifest.putRules(Arrays.asList(rule("r1")), Instant.now());
+        RuleParams paramsFoo = new RuleParams("r1");
+        manifest.putRules(Arrays.asList(rule(paramsFoo)), Instant.now());
         Map<String, CentralizedRule> rules1 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
 
-        SamplingRule r = rule("r1").withPriority(200);
+        RuleParams paramsBar = new RuleParams("r1");
+        paramsBar.priority = 200;
+        GetSamplingRulesResponse.SamplingRule r = rule(paramsBar);
 
         manifest.putRules(Arrays.asList(r), Instant.now());
         Map<String, CentralizedRule> rules2 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
@@ -224,10 +234,12 @@ class CentralizedManifestTest {
     void testRebuildOnRuleDeletion() {
         CentralizedManifest manifest = new CentralizedManifest();
 
-        manifest.putRules(Arrays.asList(rule("r1"), rule("r2")), Instant.now());
+        RuleParams paramsR1 = new RuleParams("r1");
+        RuleParams paramsR2 = new RuleParams("r2");
+        manifest.putRules(Arrays.asList(rule(paramsR1), rule(paramsR2)), Instant.now());
         Map<String, CentralizedRule> rules1 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
 
-        manifest.putRules(Arrays.asList(rule("r2")), Instant.now());
+        manifest.putRules(Arrays.asList(rule(paramsR2)), Instant.now());
         Map<String, CentralizedRule> rules2 = Whitebox.getInternalState(manifest, "rules", CentralizedManifest.class);
 
         // The map of rules should be rebuilt, resulting in a new object
@@ -241,12 +253,14 @@ class CentralizedManifestTest {
     void testManifestSizeWithDefaultRule() {
         CentralizedManifest m = new CentralizedManifest();
 
-        SamplingRule r2 = new SamplingRule()
-            .withRuleName(CentralizedRule.DEFAULT_RULE_NAME)
-            .withReservoirSize(20)
-            .withFixedRate(0.05);
+        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.builder()
+            .ruleName(CentralizedRule.DEFAULT_RULE_NAME)
+            .reservoirSize(20)
+            .fixedRate(0.05)
+            .build();
 
-        m.putRules(Arrays.asList(rule("r1"), r2), Instant.now());
+        RuleParams paramsR1 = new RuleParams("r1");
+        m.putRules(Arrays.asList(rule(paramsR1), r2), Instant.now());
 
         Assertions.assertEquals(2, m.size());
     }
@@ -255,10 +269,11 @@ class CentralizedManifestTest {
     void testManifestSizeWithoutDefaultRule() {
         CentralizedManifest m = new CentralizedManifest();
 
-        SamplingRule r1 = new SamplingRule()
-            .withRuleName(CentralizedRule.DEFAULT_RULE_NAME)
-            .withReservoirSize(20)
-            .withFixedRate(0.05);
+        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
+            .ruleName(CentralizedRule.DEFAULT_RULE_NAME)
+            .reservoirSize(20)
+            .fixedRate(0.05)
+            .build();
 
         m.putRules(Arrays.asList(r1), Instant.now());
 
@@ -270,10 +285,13 @@ class CentralizedManifestTest {
         Instant now = Instant.ofEpochSecond(1500000000);
 
         CentralizedManifest m = new CentralizedManifest();
+        RuleParams paramsR1 = new RuleParams("r1");
+        RuleParams paramsR2 = new RuleParams("r2");
+        RuleParams paramsR3 = new RuleParams(CentralizedRule.DEFAULT_RULE_NAME);
         m.putRules(Arrays.asList(
-            rule("r1"),
-            rule("r2"),
-            rule(CentralizedRule.DEFAULT_RULE_NAME)
+            rule(paramsR1),
+            rule(paramsR2),
+            rule(paramsR3)
         ), now);
 
         Map<String, CentralizedRule> rules = Whitebox.getInternalState(m, "rules", CentralizedManifest.class);
@@ -282,7 +300,7 @@ class CentralizedManifestTest {
         rules.forEach((key, r) -> r.sample(now));
         defaultRule.sample(now);
 
-        List<SamplingStatisticsDocument> snapshots = m.snapshots(now);
+        List<GetSamplingTargetsRequest.SamplingStatisticsDocument> snapshots = m.snapshots(now);
 
         Assertions.assertEquals(3, snapshots.size());
     }
@@ -292,15 +310,17 @@ class CentralizedManifestTest {
         Instant now = Instant.ofEpochSecond(1500000000);
 
         CentralizedManifest m = new CentralizedManifest();
+        RuleParams paramsR1 = new RuleParams("r1");
+        RuleParams paramsR2 = new RuleParams("r2");
         m.putRules(Arrays.asList(
-            rule("r1"),
-            rule("r2")
+            rule(paramsR1),
+            rule(paramsR2)
         ), now);
 
         Map<String, CentralizedRule> rules = Whitebox.getInternalState(m, "rules", CentralizedManifest.class);
         rules.forEach((key, r) -> r.sample(now));
 
-        List<SamplingStatisticsDocument> snapshots = m.snapshots(now);
+        List<GetSamplingTargetsRequest.SamplingStatisticsDocument> snapshots = m.snapshots(now);
 
         Assertions.assertEquals(2, snapshots.size());
     }
@@ -308,13 +328,19 @@ class CentralizedManifestTest {
     @Test
     void testRebuild() {
         Map<String, CentralizedRule> rules = new HashMap<>();
-        rules.put("r1", new CentralizedRule(rule("r1").withPriority(11), new RandImpl()));
-        rules.put("r2", new CentralizedRule(rule("r2"), new RandImpl()));
+        RuleParams paramsFooR1 = new RuleParams("r1");
+        paramsFooR1.priority = 11;
+        RuleParams paramsFooR2 = new RuleParams("r2");
+        rules.put("r1", new CentralizedRule(rule(paramsFooR1), new RandImpl()));
+        rules.put("r2", new CentralizedRule(rule(paramsFooR2), new RandImpl()));
 
-        List<SamplingRule> inputs = new ArrayList<>();
-        inputs.add(rule("r2"));
-        inputs.add(rule("r1"));
-        inputs.add(rule("r3"));
+        List<GetSamplingRulesResponse.SamplingRule> inputs = new ArrayList<>();
+        RuleParams paramsBarR1 = new RuleParams("r1");
+        RuleParams paramsBarR2 = new RuleParams("r2");
+        RuleParams paramsBarR3 = new RuleParams("r3");
+        inputs.add(rule(paramsBarR1));
+        inputs.add(rule(paramsBarR2));
+        inputs.add(rule(paramsBarR3));
 
         CentralizedManifest m = new CentralizedManifest();
         Map<String, CentralizedRule> rebuiltRules = m.rebuild(rules, inputs);
@@ -329,17 +355,34 @@ class CentralizedManifestTest {
         Assertions.assertEquals("r1", orderedList[2]);
     }
 
-    private SamplingRule rule(String ruleName) {
-        SamplingRule r = new SamplingRule()
-            .withRuleName(ruleName)
-            .withPriority(10)
-            .withReservoirSize(20)
-            .withFixedRate(0.05)
-            .withHost("*")
-            .withServiceName("s2")
-            .withHTTPMethod("POST")
-            .withURLPath("/foo")
-            .withResourceARN("arn2");
+    static class RuleParams {
+        public String name;
+        public int priority = 10;
+        public int reservoirSize = 20;
+        public double fixedRate = 0.05;
+        public String host = "*";
+        public String serviceName = "s2";
+        public String httpMethod = "POST";
+        public String urlPath = "/foo";
+        public String resourceArn = "arn2";
+
+        RuleParams(String ruleName) {
+            name = ruleName;
+        }
+    }
+
+    private GetSamplingRulesResponse.SamplingRule rule(RuleParams parmas) {
+        GetSamplingRulesResponse.SamplingRule r = GetSamplingRulesResponse.SamplingRule.builder()
+            .ruleName(parmas.name)
+            .priority(parmas.priority)
+            .reservoirSize(parmas.reservoirSize)
+            .fixedRate(parmas.fixedRate)
+            .host(parmas.host)
+            .serviceName(parmas.serviceName)
+            .httpMethod(parmas.httpMethod)
+            .urlPath(parmas.urlPath)
+            .resourceARN(parmas.resourceArn)
+            .build();
 
         return r;
     }

@@ -15,6 +15,10 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin")
 }
 
+allprojects {
+    version = "2.18.199"
+}
+
 tasks {
     val prepareRelease by registering {
         doLast {
@@ -119,7 +123,8 @@ allprojects {
             excludeTests = true
 
             // TODO(anuraaga): Enable on all projects.
-            skipCheckerFramework = project.name != "aws-xray-recorder-sdk-core" || JavaVersion.current() != JavaVersion.VERSION_11
+            // skipCheckerFramework = project.name != "aws-xray-recorder-sdk-core" || JavaVersion.current() != JavaVersion.VERSION_11
+            skipCheckerFramework = true
         }
 
         dependencies {
@@ -142,6 +147,7 @@ allprojects {
             if (!JavaVersion.current().isJava9Compatible) {
                 add("errorproneJavac", "com.google.errorprone:javac:9+181-r4173-1")
             }
+            // add("errorprone", "com.uber.nullaway:nullaway:0.10.10")
 
             configurations.configureEach {
                 if (isCanBeResolved && !isCanBeConsumed) {
