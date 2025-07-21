@@ -1,0 +1,1065 @@
++ ./gradlew clean build -Dorg.gradle.jvmargs=-XX:MaxMetaspaceSize=2096m
+
+> Configure project :
+Inferred project: aws-xray-sdk-java-2.18.199, version: 2.8.0-dev.129.uncommitted+8e4b96b
+
+> Task :aws-xray-recorder-sdk-bom:clean
+> Task :aws-xray-recorder-sdk-benchmark:clean
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:clean
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:clean
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:clean
+> Task :aws-xray-recorder-sdk-log4j:clean
+> Task :aws-xray-recorder-sdk-lambda:clean
+> Task :dependencyManagement:clean UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:clean
+> Task :aws-xray-recorder-sdk-aws-sdk:clean
+> Task :aws-xray-recorder-sdk-apache-http:clean
+> Task :jacoco:clean
+> Task :aws-xray-recorder-sdk-aws-sdk:generateProperties
+> Task :aws-xray-recorder-sdk-apache-http:generateProperties
+> Task :aws-xray-recorder-sdk-metrics:clean
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:generateProperties
+> Task :aws-xray-recorder-sdk-lambda:generateProperties
+> Task :aws-xray-recorder-sdk-metrics:generateProperties
+> Task :aws-xray-recorder-sdk-bom:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-bom:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-bom:build UP-TO-DATE
+> Task :dependencyManagement:assemble UP-TO-DATE
+> Task :dependencyManagement:check UP-TO-DATE
+> Task :dependencyManagement:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:generateProperties
+> Task :aws-xray-recorder-sdk-log4j:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-core:clean
+> Task :aws-xray-recorder-sdk-apache-http:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:clean
+> Task :jacoco:generateProperties
+> Task :aws-xray-recorder-sdk-benchmark:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:clean
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processResources
+> Task :aws-xray-recorder-sdk-aws-sdk:processResources
+> Task :aws-xray-recorder-sdk-log4j:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:processResources
+> Task :aws-xray-recorder-sdk-metrics:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processResources
+> Task :aws-xray-recorder-sdk-slf4j:processResources NO-SOURCE
+> Task :jacoco:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:generateProperties
+> Task :aws-xray-recorder-sdk-spring:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:generateProperties
+> Task :aws-xray-recorder-sdk-sql:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-benchmark:processResources
+> Task :aws-xray-recorder-sdk-benchmark:classes
+> Task :aws-xray-recorder-sdk-benchmark:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:sourcesJar
+> Task :aws-xray-recorder-sdk-apache-http:sourcesJar
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processTestResources NO-SOURCE
+> Task :smoke-tests:clean
+> Task :clean
+> Task :check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:licenseTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:sourcesJar
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:sourcesJar
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-apache-http:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:sourcesJar
+> Task :aws-xray-recorder-sdk-aws-sdk:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:licenseTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:license UP-TO-DATE
+> Task :smoke-tests:generateProperties
+> Task :aws-xray-recorder-sdk-benchmark:jar
+> Task :aws-xray-recorder-sdk-benchmark:assemble
+> Task :aws-xray-recorder-sdk-benchmark:licenseJmh UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:licenseTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-benchmark:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:compileTestJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-benchmark:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-benchmark:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:test NO-SOURCE
+> Task :aws-xray-recorder-sdk-benchmark:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:build
+> Task :aws-xray-recorder-sdk-slf4j:sourcesJar
+> Task :aws-xray-recorder-sdk-slf4j:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-slf4j:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:license UP-TO-DATE
+> Task :jacoco:sourcesJar
+> Task :aws-xray-recorder-sdk-log4j:sourcesJar
+> Task :jacoco:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-log4j:processTestResources NO-SOURCE
+> Task :jacoco:licenseMain NO-SOURCE
+> Task :jacoco:licenseTest NO-SOURCE
+> Task :jacoco:license UP-TO-DATE
+> Task :smoke-tests:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-log4j:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:clean
+> Task :aws-xray-recorder-sdk-sql-postgres:clean
+> Task :aws-xray-recorder-sdk-spring:sourcesJar
+> Task :aws-xray-recorder-sdk-spring:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:sourcesJar
+> Task :aws-xray-recorder-sdk-spring:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:generateProperties
+> Task :aws-xray-recorder-sdk-sql-mysql:generateProperties
+> Task :aws-xray-recorder-sdk-sql-postgres:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-metrics:sourcesJar
+> Task :aws-xray-recorder-sdk-metrics:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-metrics:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:license UP-TO-DATE
+> Task :smoke-tests:sourcesJar
+> Task :smoke-tests:processTestResources NO-SOURCE
+> Task :smoke-tests:licenseMain NO-SOURCE
+> Task :smoke-tests:licenseTest UP-TO-DATE
+> Task :smoke-tests:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:sourcesJar
+> Task :aws-xray-recorder-sdk-sql-postgres:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql-mysql:sourcesJar
+> Task :aws-xray-recorder-sdk-sql-mysql:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql-postgres:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:clean
+> Task :aws-xray-recorder-sdk-lambda:compileJava
+> Task :aws-xray-recorder-sdk-lambda:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-lambda:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-core:compileJava
+> Task :aws-xray-recorder-sdk-aws-sdk-core:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-core:processResources
+> Task :aws-xray-recorder-sdk-aws-sdk-core:classes
+> Task :aws-xray-recorder-sdk-lambda:javadoc
+> Task :aws-xray-recorder-sdk-lambda:jar
+> Task :aws-xray-recorder-sdk-lambda:javadocJar
+> Task :aws-xray-recorder-sdk-lambda:sourcesJar
+> Task :aws-xray-recorder-sdk-lambda:assemble
+> Task :aws-xray-recorder-sdk-aws-sdk-core:javadoc
+> Task :aws-xray-recorder-sdk-aws-sdk-core:jar
+> Task :aws-xray-recorder-sdk-aws-sdk-core:javadocJar
+> Task :aws-xray-recorder-sdk-aws-sdk-core:sourcesJar
+> Task :aws-xray-recorder-sdk-aws-sdk-core:assemble
+> Task :aws-xray-recorder-sdk-lambda:checkstyleMain
+> Task :aws-xray-recorder-sdk-aws-sdk-core:checkstyleMain
+> Task :aws-xray-recorder-sdk-lambda:compileTestJava
+> Task :aws-xray-recorder-sdk-lambda:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-lambda:testClasses
+
+> Task :aws-xray-recorder-sdk-aws-sdk-core:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-aws-sdk-core:processTestResources
+> Task :aws-xray-recorder-sdk-aws-sdk-core:testClasses
+> Task :aws-xray-recorder-sdk-lambda:checkstyleTest
+> Task :aws-xray-recorder-sdk-lambda:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:license UP-TO-DATE
+
+> Task :aws-xray-recorder-sdk-core:compileJava
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceHeader.java:104: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                (entity.getId() == null || entity.getId() == "") ? parentId : entity.getId(),
+                                                          ^
+    (see https://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean '(entity.getId() == null || "".equals(entity.getId())) ? parentId : entity.getId(),'?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/GetSamplingRulesResponse.java:38: warning: [AutoValueImmutableFields] AutoValue instances should be deeply immutable. Therefore, we recommend returning ImmutableList instead. Read more at http://goo.gl/qWo9sC
+    public abstract List<SamplingRuleRecord> getSamplingRules();
+                                             ^
+    (see https://errorprone.info/bugpattern/AutoValueImmutableFields)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/GetSamplingRulesResponse.java:93: warning: [AutoValueImmutableFields] AutoValue instances should be deeply immutable. Therefore, we recommend returning ImmutableMap instead. Read more at http://goo.gl/qWo9sC
+        public abstract Map<String, String> getAttributes();
+                                            ^
+    (see https://errorprone.info/bugpattern/AutoValueImmutableFields)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/GetSamplingTargetsRequest.java:35: warning: [AutoValueImmutableFields] AutoValue instances should be deeply immutable. Therefore, we recommend returning ImmutableList instead. Read more at http://goo.gl/qWo9sC
+    abstract List<SamplingStatisticsDocument> getDocuments();
+                                              ^
+    (see https://errorprone.info/bugpattern/AutoValueImmutableFields)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/GetSamplingTargetsResponse.java:39: warning: [AutoValueImmutableFields] AutoValue instances should be deeply immutable. Therefore, we recommend returning ImmutableList instead. Read more at http://goo.gl/qWo9sC
+    public abstract List<SamplingTargetDocument> getDocuments();
+                                                 ^
+    (see https://errorprone.info/bugpattern/AutoValueImmutableFields)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/GetSamplingTargetsResponse.java:41: warning: [AutoValueImmutableFields] AutoValue instances should be deeply immutable. Therefore, we recommend returning ImmutableList instead. Read more at http://goo.gl/qWo9sC
+    public abstract List<UnprocessedStatistics> getUnprocessedStatistics();
+                                                ^
+    (see https://errorprone.info/bugpattern/AutoValueImmutableFields)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/jakarta/servlet/AWSXRayServletAsyncListener.java:31: warning: [UnusedVariable] The field 'recorder' is never read.
+    private AWSXRayRecorder recorder;
+                            ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/javax/servlet/AWSXRayServletAsyncListener.java:31: warning: [UnusedVariable] The field 'recorder' is never read.
+    private AWSXRayRecorder recorder;
+                            ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/build/generated/sources/annotationProcessor/java/main/com/amazonaws/xray/strategy/sampling/AutoValue_GetSamplingTargetsResponse.java:64: warning: [UndefinedEquals] Date does not have well-defined equals behavior.
+      return this.lastRuleModification.equals(that.getLastRuleModification())
+                                             ^
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/build/generated/sources/annotationProcessor/java/main/com/amazonaws/xray/strategy/sampling/AutoValue_GetSamplingTargetsResponse_SamplingTargetDocument.java:87: warning: [UndefinedEquals] Date does not have well-defined equals behavior.
+          && (this.reservoirQuotaTtl == null ? that.getReservoirQuotaTtl() == null : this.reservoirQuotaTtl.equals(that.getReservoirQuotaTtl()))
+                                                                                                                  ^
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/build/generated/sources/annotationProcessor/java/main/com/amazonaws/xray/strategy/sampling/AutoValue_GetSamplingTargetsRequest_SamplingStatisticsDocument.java:194: warning: [AutoValueSubclassLeaked] Do not refer to the autogenerated AutoValue_ class outside the file containing the corresponding @AutoValue base class.
+      return new AutoValue_GetSamplingTargetsRequest_SamplingStatisticsDocument(
+                 ^
+    (see https://errorprone.info/bugpattern/AutoValueSubclassLeaked)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/build/generated/sources/annotationProcessor/java/main/com/amazonaws/xray/strategy/sampling/AutoValue_GetSamplingTargetsRequest_SamplingStatisticsDocument.java:99: warning: [UndefinedEquals] Date does not have well-defined equals behavior.
+          && this.timestamp.equals(that.getTimestamp());
+                                  ^
+    (see https://errorprone.info/bugpattern/UndefinedEquals)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+12 warnings
+
+> Task :aws-xray-recorder-sdk-core:generateProperties
+> Task :aws-xray-recorder-sdk-core:processResources
+> Task :aws-xray-recorder-sdk-core:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-core:checkstyleTest
+
+> Task :aws-xray-recorder-sdk-log4j:compileJava
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-log4j/src/main/java/com/amazonaws/xray/log4j/Log4JSegmentListener.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-log4j:classes
+
+> Task :aws-xray-recorder-sdk-slf4j:compileJava
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-slf4j/src/main/java/com/amazonaws/xray/slf4j/SLF4JSegmentListener.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-slf4j:classes
+> Task :aws-xray-recorder-sdk-sql-mysql:compileJava
+> Task :aws-xray-recorder-sdk-sql-mysql:classes
+> Task :aws-xray-recorder-sdk-spring:compileJava
+> Task :aws-xray-recorder-sdk-spring:classes
+
+> Task :aws-xray-recorder-sdk-sql-postgres:compileJava
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-sql-postgres/src/main/java/com/amazonaws/xray/sql/postgres/TracingInterceptor.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-sql-postgres:classes
+> Task :aws-xray-recorder-sdk-apache-http:compileJava
+> Task :aws-xray-recorder-sdk-apache-http:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:compileJava
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:classes
+> Task :aws-xray-recorder-sdk-aws-sdk:compileJava
+> Task :aws-xray-recorder-sdk-aws-sdk:classes
+
+> Task :aws-xray-recorder-sdk-metrics:compileJava
+warning: unknown enum constant Include.NON_DEFAULT
+  reason: class file for com.fasterxml.jackson.annotation.JsonInclude$Include not found
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-metrics/src/main/java/com/amazonaws/xray/metrics/EMFMetricFormatter.java:56: warning: [InlineFormatString] Prefer to create format strings inline, instead of extracting them to a single-use constant
+    private static final String EMF_FORMAT = "{\"Timestamp\":%d,\"log_group_name\":\"ServiceMetricsSDK\",\"CloudWatchMetrics\":"
+                                ^
+    (see https://errorprone.info/bugpattern/InlineFormatString)
+  Did you mean to remove this line?
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-metrics/src/main/java/com/amazonaws/xray/config/MetricsDaemonConfiguration.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+7 warnings
+
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-metrics:classes
+> Task :aws-xray-recorder-sdk-lambda:test
+> Task :smoke-tests:compileJava NO-SOURCE
+> Task :smoke-tests:classes
+> Task :smoke-tests:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:license UP-TO-DATE
+
+> Task :aws-xray-recorder-sdk-sql:compileJava
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-sql/src/main/java/com/amazonaws/xray/sql/TracingConnection.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-sql:classes
+> Task :aws-xray-recorder-sdk-log4j:javadoc
+> Task :jacoco:compileJava NO-SOURCE
+> Task :jacoco:classes
+> Task :jacoco:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:jar
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadocJar
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:assemble
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:checkstyleMain NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:compileTestJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:checkstyleTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:jar
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:javadocJar
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:assemble
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:checkstyleMain NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:compileTestJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:checkstyleTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-lambda:check
+> Task :aws-xray-recorder-sdk-lambda:build
+> Task :aws-xray-recorder-sdk-log4j:jar
+> Task :aws-xray-recorder-sdk-log4j:javadocJar
+> Task :aws-xray-recorder-sdk-log4j:assemble
+> Task :aws-xray-recorder-sdk-slf4j:javadoc
+> Task :aws-xray-recorder-sdk-slf4j:jar
+> Task :aws-xray-recorder-sdk-slf4j:javadocJar
+> Task :aws-xray-recorder-sdk-slf4j:assemble
+> Task :aws-xray-recorder-sdk-sql-mysql:javadoc
+> Task :aws-xray-recorder-sdk-sql-mysql:jar
+> Task :aws-xray-recorder-sdk-slf4j:checkstyleMain
+> Task :aws-xray-recorder-sdk-sql-mysql:javadocJar
+> Task :aws-xray-recorder-sdk-sql-mysql:assemble
+> Task :aws-xray-recorder-sdk-log4j:checkstyleMain
+> Task :aws-xray-recorder-sdk-sql-postgres:javadoc
+> Task :aws-xray-recorder-sdk-sql-postgres:jar
+> Task :aws-xray-recorder-sdk-sql-postgres:javadocJar
+> Task :aws-xray-recorder-sdk-sql-postgres:assemble
+> Task :aws-xray-recorder-sdk-sql-mysql:checkstyleMain
+> Task :aws-xray-recorder-sdk-spring:javadoc
+> Task :aws-xray-recorder-sdk-spring:jar
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadoc
+> Task :aws-xray-recorder-sdk-spring:javadocJar
+> Task :aws-xray-recorder-sdk-spring:assemble
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:jar
+> Task :aws-xray-recorder-sdk-sql-postgres:checkstyleMain
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadocJar
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:assemble
+> Task :aws-xray-recorder-sdk-spring:checkstyleMain
+> Task :aws-xray-recorder-sdk-aws-sdk:javadoc
+> Task :aws-xray-recorder-sdk-metrics:javadoc
+> Task :aws-xray-recorder-sdk-aws-sdk:jar
+> Task :aws-xray-recorder-sdk-metrics:jar
+> Task :aws-xray-recorder-sdk-apache-http:javadoc
+> Task :aws-xray-recorder-sdk-apache-http:jar
+> Task :aws-xray-recorder-sdk-aws-sdk:javadocJar
+> Task :aws-xray-recorder-sdk-aws-sdk:assemble
+> Task :aws-xray-recorder-sdk-metrics:javadocJar
+> Task :aws-xray-recorder-sdk-metrics:assemble
+> Task :aws-xray-recorder-sdk-apache-http:javadocJar
+> Task :aws-xray-recorder-sdk-apache-http:assemble
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:checkstyleMain
+> Task :aws-xray-recorder-sdk-metrics:checkstyleMain
+> Task :aws-xray-recorder-sdk-aws-sdk:checkstyleMain
+> Task :aws-xray-recorder-sdk-apache-http:checkstyleMain
+> Task :aws-xray-recorder-sdk-sql:javadoc
+> Task :aws-xray-recorder-sdk-sql:jar
+> Task :aws-xray-recorder-sdk-sql:javadocJar
+> Task :aws-xray-recorder-sdk-sql:assemble
+> Task :aws-xray-recorder-sdk-sql-mysql:compileTestJava
+> Task :aws-xray-recorder-sdk-sql-mysql:testClasses
+> Task :aws-xray-recorder-sdk-core:javadoc
+
+> Task :aws-xray-recorder-sdk-log4j:compileTestJava
+warning: unknown enum constant Include.NON_DEFAULT
+  reason: class file for com.fasterxml.jackson.annotation.JsonInclude$Include not found
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+6 warnings
+
+> Task :aws-xray-recorder-sdk-sql:checkstyleMain
+> Task :aws-xray-recorder-sdk-log4j:testClasses
+> Task :aws-xray-recorder-sdk-sql-mysql:checkstyleTest
+
+> Task :aws-xray-recorder-sdk-slf4j:compileTestJava
+warning: unknown enum constant Include.NON_DEFAULT
+  reason: class file for com.fasterxml.jackson.annotation.JsonInclude$Include not found
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+warning: unknown enum constant Include.NON_DEFAULT
+6 warnings
+
+> Task :aws-xray-recorder-sdk-slf4j:testClasses
+> Task :aws-xray-recorder-sdk-sql-postgres:compileTestJava
+> Task :aws-xray-recorder-sdk-sql-postgres:testClasses
+> Task :aws-xray-recorder-sdk-core:jar
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:test NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:build
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:test NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:build
+> Task :aws-xray-recorder-sdk-log4j:checkstyleTest
+> Task :aws-xray-recorder-sdk-slf4j:checkstyleTest
+> Task :aws-xray-recorder-sdk-sql-postgres:checkstyleTest
+> Task :aws-xray-recorder-sdk-core:javadocJar
+> Task :aws-xray-recorder-sdk-core:sourcesJar
+> Task :aws-xray-recorder-sdk-core:assemble
+
+> Task :aws-xray-recorder-sdk-spring:compileTestJava
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-spring/src/test/java/com/amazonaws/xray/spring/aop/BaseAbstractXRayInterceptorTest.java:81: warning: [MissingFail] Not calling fail() when expecting an exception masks bugs
+            xRayInterceptor.processXRayTrace(mockPjp);
+            ^
+    (see https://errorprone.info/bugpattern/MissingFail)
+  Did you mean 'Exception e = assertThrows(Exception.class, () -> xRayInterceptor.processXRayTrace(mockPjp));' or 'xRayInterceptor.processXRayTrace(mockPjp);'?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-spring/src/test/java/com/amazonaws/xray/spring/aop/BaseAbstractXRayInterceptorTest.java:103: warning: [MissingFail] Not calling fail() when expecting an exception masks bugs
+            xRayInterceptor.processXRayTrace(mockPjp);
+            ^
+    (see https://errorprone.info/bugpattern/MissingFail)
+  Did you mean 'Exception e = assertThrows(Exception.class, () -> xRayInterceptor.processXRayTrace(mockPjp));' or 'xRayInterceptor.processXRayTrace(mockPjp);'?
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-spring/src/test/java/com/amazonaws/xray/spring/aop/BaseAbstractXRayInterceptorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+2 warnings
+
+> Task :aws-xray-recorder-sdk-spring:testClasses
+> Task :aws-xray-recorder-sdk-aws-sdk-core:test
+> Task :aws-xray-recorder-sdk-aws-sdk-core:check
+> Task :aws-xray-recorder-sdk-aws-sdk-core:build
+> Task :aws-xray-recorder-sdk-spring:checkstyleTest
+> Task :aws-xray-recorder-sdk-metrics:compileTestJava
+> Task :aws-xray-recorder-sdk-metrics:testClasses
+> Task :aws-xray-recorder-sdk-metrics:checkstyleTest
+
+> Task :aws-xray-recorder-sdk-apache-http:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-apache-http:testClasses
+> Task :aws-xray-recorder-sdk-apache-http:checkstyleTest
+
+> Task :aws-xray-recorder-sdk-aws-sdk:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-aws-sdk/src/test/java/com/amazonaws/xray/handlers/TracingHandlerLambdaTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :aws-xray-recorder-sdk-aws-sdk:testClasses
+
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:compileTestJava
+Note: /Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-aws-sdk-v2/src/test/java/com/amazonaws/xray/interceptors/TracingInterceptorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:testClasses
+> Task :aws-xray-recorder-sdk-aws-sdk:checkstyleTest
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:checkstyleTest
+> Task :aws-xray-recorder-sdk-sql:compileTestJava
+> Task :aws-xray-recorder-sdk-sql:testClasses
+> Task :aws-xray-recorder-sdk-sql-mysql:test
+> Task :aws-xray-recorder-sdk-sql-mysql:check
+> Task :aws-xray-recorder-sdk-sql-mysql:build
+> Task :jacoco:jar
+> Task :jacoco:javadocJar
+> Task :jacoco:assemble
+> Task :jacoco:checkstyleMain NO-SOURCE
+> Task :jacoco:compileTestJava NO-SOURCE
+> Task :jacoco:testClasses UP-TO-DATE
+> Task :jacoco:checkstyleTest NO-SOURCE
+> Task :jacoco:test NO-SOURCE
+> Task :jacoco:check UP-TO-DATE
+> Task :jacoco:build
+> Task :smoke-tests:jar
+> Task :smoke-tests:javadocJar
+> Task :smoke-tests:assemble
+> Task :smoke-tests:checkstyleMain NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:checkstyleTest
+> Task :aws-xray-recorder-sdk-sql-postgres:test
+> Task :aws-xray-recorder-sdk-sql-postgres:check
+> Task :aws-xray-recorder-sdk-sql-postgres:build
+> Task :aws-xray-recorder-sdk-core:checkstyleMain
+
+> Task :aggregateJavadoc
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-spring/src/main/java/com/amazonaws/xray/spring/aop/BaseAbstractXRayInterceptor.java:39: warning: no description for @throws
+     * @throws Throwable
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-spring/src/main/java/com/amazonaws/xray/spring/aop/AbstractXRayInterceptor.java:36: warning: no description for @throws
+     * @throws Throwable
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/config/DaemonConfiguration.java:96: warning: no @return
+    public boolean setUDPAndTCPAddress(@Nullable String addr) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/contexts/SegmentContextExecutors.java:48: warning: no @return
+    public static Executor newSegmentContextExecutor() {
+                           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/contexts/SegmentContextExecutors.java:56: warning: no @param for segment
+    public static Executor newSegmentContextExecutor(@Nullable Segment segment) {
+                           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/contexts/SegmentContextExecutors.java:56: warning: no @return
+    public static Executor newSegmentContextExecutor(@Nullable Segment segment) {
+                           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/contexts/SegmentContextExecutors.java:64: warning: no @param for recorder
+    public static Executor newSegmentContextExecutor(AWSXRayRecorder recorder, @Nullable Segment segment) {
+                           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/contexts/SegmentContextExecutors.java:64: warning: no @param for segment
+    public static Executor newSegmentContextExecutor(AWSXRayRecorder recorder, @Nullable Segment segment) {
+                           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/contexts/SegmentContextExecutors.java:64: warning: no @return
+    public static Executor newSegmentContextExecutor(AWSXRayRecorder recorder, @Nullable Segment segment) {
+                           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/emitters/Emitter.java:38: warning: no @return
+    public static Emitter create() throws IOException {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/emitters/Emitter.java:47: warning: no @param for configuration
+    public static Emitter create(DaemonConfiguration configuration) throws IOException {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/emitters/Emitter.java:47: warning: no @return
+    public static Emitter create(DaemonConfiguration configuration) throws IOException {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/emitters/DelegatingEmitter.java:54: warning: no @param for delegate
+    protected DelegatingEmitter(Emitter delegate) {
+              ^
+
+> Task :smoke-tests:compileTestJava
+> Task :smoke-tests:testClasses
+> Task :smoke-tests:checkstyleTest
+> Task :aws-xray-recorder-sdk-slf4j:test
+> Task :aws-xray-recorder-sdk-slf4j:check
+> Task :aws-xray-recorder-sdk-slf4j:build
+> Task :aws-xray-recorder-sdk-metrics:test
+> Task :aws-xray-recorder-sdk-metrics:check
+> Task :aws-xray-recorder-sdk-metrics:build
+> Task :aws-xray-recorder-sdk-log4j:test
+> Task :aws-xray-recorder-sdk-log4j:check
+> Task :aws-xray-recorder-sdk-log4j:build
+> Task :aws-xray-recorder-sdk-spring:test
+> Task :aws-xray-recorder-sdk-spring:check
+> Task :aws-xray-recorder-sdk-spring:build
+
+> Task :aggregateJavadoc
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/AWSLogReference.java:38: warning: no @return
+    public String getLogGroup() {
+                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/AWSLogReference.java:45: warning: no @param for logGroup
+    public void setLogGroup(final String logGroup) {
+                ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/AWSLogReference.java:53: warning: no @return
+    public String getArn() {
+                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/AWSLogReference.java:60: warning: no @param for arn
+    public void setArn(final String arn) {
+                ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/AWSLogReference.java:66: warning: no description for @return
+     * @return
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:35: warning: no @return
+    static String generateId() {
+                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:42: warning: no @param for runnable
+    default void run(Runnable runnable) {
+                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:49: warning: no @param for runnable
+    default void run(Runnable runnable, AWSXRayRecorder recorder) {
+                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:49: warning: no @param for recorder
+    default void run(Runnable runnable, AWSXRayRecorder recorder) {
+                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:380: warning: no @return
+    List<Subsegment> getSubsegmentsCopy();
+                     ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:608: warning: no @param for emitted
+    void setEmitted(boolean emitted);
+         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:617: warning: no @param for current
+    boolean compareAndSetEmitted(boolean current, boolean next);
+            ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:617: warning: no @param for next
+    boolean compareAndSetEmitted(boolean current, boolean next);
+            ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Entity.java:617: warning: no @return
+    boolean compareAndSetEmitted(boolean current, boolean next);
+            ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/Segment.java:41: warning: no @return
+    boolean isRecording();
+            ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRay.java:112: warning: no @return
+    public static Segment beginDummySegment() {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRay.java:173: warning: no @param for entity
+    public static void injectThreadLocal(Entity entity) {
+                       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRay.java:182: warning: no @return
+    public static Entity getThreadLocal() {
+                         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRay.java:199: warning: no @param for entity
+    public static void setTraceEntity(@Nullable Entity entity) {
+                       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRay.java:220: warning: no @param for subsegment
+    public static boolean sendSubegment(Subsegment subsegment) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRay.java:220: warning: no @return
+    public static boolean sendSubegment(Subsegment subsegment) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:118: warning: no @param for startTime
+    public TraceID(long startTime) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:41: warning: no @return
+    public static TraceID create() {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:50: warning: no @param for creator
+    public static TraceID create(AWSXRayRecorder creator) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:50: warning: no @return
+    public static TraceID create(AWSXRayRecorder creator) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:58: warning: no @param for xrayTraceId
+    public static TraceID fromString(String xrayTraceId) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:58: warning: no @return
+    public static TraceID fromString(String xrayTraceId) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:92: warning: no @return
+    public static TraceID invalid() {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:149: warning: no @return
+    public String getNumberAsHex() {
+                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/entities/TraceID.java:178: warning: no @return
+    public String getStartTimeAsHex() {
+                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/internal/RecyclableBuffers.java:41: warning: no @return
+    public static StringBuilder stringBuilder() {
+                                ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/internal/RecyclableBuffers.java:56: warning: no @param for length
+    public static char[] chars(int length) {
+                         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/internal/RecyclableBuffers.java:56: warning: no @return
+    public static char[] chars(int length) {
+                         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/internal/RecyclableBuffers.java:68: warning: no @param for length
+    public static byte[] bytes(int length) {
+                         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/internal/RecyclableBuffers.java:68: warning: no @return
+    public static byte[] bytes(int length) {
+                         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/jakarta/SegmentNamingStrategy.java:41: warning: no @param for name
+    static SegmentNamingStrategy fixed(String name) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/jakarta/SegmentNamingStrategy.java:41: warning: no @return
+    static SegmentNamingStrategy fixed(String name) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/jakarta/SegmentNamingStrategy.java:54: warning: no @return
+    static SegmentNamingStrategy dynamic(String fallbackName) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/jakarta/SegmentNamingStrategy.java:70: warning: no @return
+    static SegmentNamingStrategy dynamic(String fallbackName, String recognizedHosts) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/jakarta/FixedSegmentNamingStrategy.java:40: warning: no @param for name
+    public FixedSegmentNamingStrategy(String name) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/listeners/SegmentListener.java:102: warning: no description for @param
+     * @param previousEntity
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/listeners/SegmentListener.java:103: warning: no description for @param
+     * @param newEntity
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/listeners/SegmentListener.java:112: warning: no description for @param
+     * @param previousEntity
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-log4j/src/main/java/com/amazonaws/xray/log4j/Log4JSegmentListener.java:45: warning: no description for @param
+     * @param prefix
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-log4j/src/main/java/com/amazonaws/xray/log4j/Log4JSegmentListener.java:58: warning: no description for @param
+     * @param prefix
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-sql-mysql/src/main/java/com/amazonaws/xray/sql/mysql/TracingInterceptor.java:83: warning: no description for @throws
+     * @throws NoSuchMethodException
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorderBuilder.java:235: warning: no @return
+    public AWSXRayRecorderBuilder withFastIdGenerator() {
+                                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorderBuilder.java:248: warning: no @return
+    public AWSXRayRecorderBuilder withSecureIdGenerator() {
+                                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorderBuilder.java:259: warning: no @return
+    public AWSXRayRecorderBuilder withForcedTraceIdGeneration() {
+                                  ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/pollers/RulePoller.java:57: warning: no @param for manifest
+    public RulePoller(CentralizedManifest manifest, Object unused, Clock clock) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/pollers/RulePoller.java:57: warning: no @param for unused
+    public RulePoller(CentralizedManifest manifest, Object unused, Clock clock) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/pollers/RulePoller.java:57: warning: no @param for clock
+    public RulePoller(CentralizedManifest manifest, Object unused, Clock clock) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/pollers/TargetPoller.java:52: warning: no @param for manifest
+    public TargetPoller(CentralizedManifest manifest, Object unused, Clock clock) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/pollers/TargetPoller.java:52: warning: no @param for unused
+    public TargetPoller(CentralizedManifest manifest, Object unused, Clock clock) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/pollers/TargetPoller.java:52: warning: no @param for clock
+    public TargetPoller(CentralizedManifest manifest, Object unused, Clock clock) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-sql-postgres/src/main/java/com/amazonaws/xray/sql/postgres/TracingInterceptor.java:83: warning: no description for @throws
+     * @throws NoSuchMethodException
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/sampling/XRayClient.java:33: warning: no @return
+    public static Object newClient() {
+                         ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-slf4j/src/main/java/com/amazonaws/xray/slf4j/SLF4JSegmentListener.java:47: warning: no description for @param
+     * @param prefix
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-slf4j/src/main/java/com/amazonaws/xray/slf4j/SLF4JSegmentListener.java:60: warning: no description for @param
+     * @param prefix
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/SegmentNamingStrategy.java:41: warning: no @param for name
+    static SegmentNamingStrategy fixed(String name) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/SegmentNamingStrategy.java:41: warning: no @return
+    static SegmentNamingStrategy fixed(String name) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/SegmentNamingStrategy.java:54: warning: no @return
+    static SegmentNamingStrategy dynamic(String fallbackName) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/SegmentNamingStrategy.java:70: warning: no @return
+    static SegmentNamingStrategy dynamic(String fallbackName, String recognizedHosts) {
+                                 ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/strategy/FixedSegmentNamingStrategy.java:40: warning: no @param for name
+    public FixedSegmentNamingStrategy(String name) {
+           ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/utils/JsonUtils.java:41: warning: no description for @throws
+     * @throws IOException
+       ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/utils/LooseValidations.java:47: warning: no @param for obj
+    public static boolean checkNotNull(Object obj, String message) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/utils/LooseValidations.java:47: warning: no @param for message
+    public static boolean checkNotNull(Object obj, String message) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/utils/LooseValidations.java:47: warning: no @return
+    public static boolean checkNotNull(Object obj, String message) {
+                          ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:448: warning: no @return
+    public Segment beginNoOpSegment() {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:456: warning: no @param for traceID
+    public Segment beginNoOpSegment(TraceID traceID) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:456: warning: no @return
+    public Segment beginNoOpSegment(TraceID traceID) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:476: warning: no @param for name
+    public Segment beginDummySegment(String name, TraceID traceId) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:476: warning: no @param for traceId
+    public Segment beginDummySegment(String name, TraceID traceId) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:476: warning: no @return
+    public Segment beginDummySegment(String name, TraceID traceId) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:484: warning: no @param for traceId
+    public Segment beginDummySegment(TraceID traceId) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:484: warning: no @return
+    public Segment beginDummySegment(TraceID traceId) {
+                   ^
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/main/java/com/amazonaws/xray/AWSXRayRecorder.java:1119: warning: no @param for alwaysCreateTraceId
+    public void setForcedTraceIdGeneration(final boolean alwaysCreateTraceId) {
+                ^
+90 warnings
+
+> Task :aggregateJavadocJar
+> Task :assemble
+> Task :build
+
+> Task :aws-xray-recorder-sdk-sql:test
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.mockito.internal.util.reflection.ReflectionMemberAccessor (file:/Users/lukezha/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/3.6.0/48657987075fea2e2176634ae35aaa5e93c929ef/mockito-core-3.6.0.jar) to field java.lang.ref.ReferenceQueue.lock
+WARNING: Please consider reporting this to the maintainers of org.mockito.internal.util.reflection.ReflectionMemberAccessor
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+> Task :aws-xray-recorder-sdk-apache-http:test
+> Task :aws-xray-recorder-sdk-apache-http:check
+> Task :aws-xray-recorder-sdk-apache-http:build
+> Task :smoke-tests:test
+> Task :smoke-tests:check
+> Task :smoke-tests:build
+
+> Task :aws-xray-recorder-sdk-core:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :aws-xray-recorder-sdk-core:processTestResources
+> Task :aws-xray-recorder-sdk-core:testClasses
+> Task :aws-xray-recorder-sdk-sql:check
+> Task :aws-xray-recorder-sdk-sql:build
+> Task :aws-xray-recorder-sdk-core:checkstyleTest
+> Task :aws-xray-recorder-sdk-core:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:license UP-TO-DATE
+
+> Task :aws-xray-recorder-sdk-aws-sdk:test
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.powermock.reflect.internal.WhiteboxImpl (file:/Users/lukezha/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-reflect/2.0.7/9a8b85397c5a72923962ee9e6bf774e8458803bb/powermock-reflect-2.0.7.jar) to method java.io.File.getPrefixLength()
+WARNING: Please consider reporting this to the maintainers of org.powermock.reflect.internal.WhiteboxImpl
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+> Task :aws-xray-recorder-sdk-aws-sdk:check
+> Task :aws-xray-recorder-sdk-aws-sdk:build
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:test
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:check
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:build
+
+> Task :aws-xray-recorder-sdk-core:test
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Thread-4"
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.powermock.reflect.internal.WhiteboxImpl (file:/Users/lukezha/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-reflect/2.0.7/9a8b85397c5a72923962ee9e6bf774e8458803bb/powermock-reflect-2.0.7.jar) to method java.util.stream.ReferencePipeline$Head.forEach(java.util.function.Consumer)
+WARNING: Please consider reporting this to the maintainers of org.powermock.reflect.internal.WhiteboxImpl
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+> Task :aws-xray-recorder-sdk-core:check
+> Task :aws-xray-recorder-sdk-core:build
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.4.2/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 29s
+213 actionable tasks: 181 executed, 32 up-to-date
++ ./gradlew publishToMavenLocal
+
+> Configure project :
+Inferred project: aws-xray-sdk-java-2.18.199, version: 2.8.0-dev.129.uncommitted+8e4b96b
+
+> Task :aws-xray-recorder-sdk-bom:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-apache-http:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:generateProperties
+> Task :aws-xray-recorder-sdk-slf4j:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk:generateProperties
+> Task :aws-xray-recorder-sdk-metrics:generateProperties
+> Task :aws-xray-recorder-sdk-log4j:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:generateProperties
+> Task :aws-xray-recorder-sdk-bom:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-bom:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-metrics:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-log4j:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-bom:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-bom:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-spring:generateProperties
+> Task :aws-xray-recorder-sdk-spring:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-sql:generateProperties
+> Task :aws-xray-recorder-sdk-sql:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:generateProperties
+> Task :aws-xray-recorder-sdk-sql-mysql:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql-mysql:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-sql-postgres:generateProperties
+> Task :aws-xray-recorder-sdk-sql-postgres:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql-postgres:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-sql-mysql:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-metrics:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-spring:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-sql:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk-core:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:generateProperties
+> Task :aws-xray-recorder-sdk-core:generateProperties
+> Task :aws-xray-recorder-sdk-lambda:generateProperties
+> Task :aws-xray-recorder-sdk-lambda:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-lambda:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-core:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:classes
+> Task :aws-xray-recorder-sdk-core:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:classes
+> Task :aws-xray-recorder-sdk-lambda:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:classes
+> Task :aws-xray-recorder-sdk-slf4j:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:classes
+> Task :aws-xray-recorder-sdk-apache-http:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:classes
+> Task :aws-xray-recorder-sdk-metrics:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:classes
+> Task :aws-xray-recorder-sdk-aws-sdk:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:classes
+> Task :aws-xray-recorder-sdk-sql-mysql:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:classes
+> Task :aws-xray-recorder-sdk-log4j:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:classes
+> Task :aws-xray-recorder-sdk-spring:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-log4j:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-log4j:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-slf4j:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-slf4j:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-lambda:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-apache-http:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-lambda:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-metrics:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-metrics:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-lambda:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-lambda:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-core:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-aws-sdk-core:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-aws-sdk-core:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-log4j:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-log4j:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-sql:classes
+> Task :aws-xray-recorder-sdk-slf4j:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-slf4j:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-sql-mysql:classes
+> Task :aws-xray-recorder-sdk-spring:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-apache-http:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-spring:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-spring:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-lambda:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-lambda:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-core:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-aws-sdk-core:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-metrics:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-metrics:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-sql-mysql:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-spring:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-sql-postgres:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:classes
+> Task :aws-xray-recorder-sdk-sql-mysql:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-sql-mysql:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-sql-mysql:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-sql:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-sql-postgres:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-sql-mysql:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-sql:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-sql:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-sql-postgres:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-sql-postgres:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-core:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:generateMetadataFileForMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-sql-postgres:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-sql-postgres:publishToMavenLocal
+> Task :aws-xray-recorder-sdk-core:generatePomFileForMavenPublication
+> Task :aws-xray-recorder-sdk-core:signMavenPublication SKIPPED
+> Task :aws-xray-recorder-sdk-core:publishMavenPublicationToMavenLocal
+> Task :aws-xray-recorder-sdk-core:publishToMavenLocal
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.4.2/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 1s
+124 actionable tasks: 47 executed, 77 up-to-date
