@@ -15,10 +15,11 @@
 
 package com.amazonaws.xray.strategy.sampling.manifest;
 
-import com.amazonaws.services.xray.model.SamplingRule;
-import com.amazonaws.services.xray.model.SamplingStatisticsDocument;
-import com.amazonaws.services.xray.model.SamplingTargetDocument;
 import com.amazonaws.xray.strategy.sampling.CentralizedSamplingStrategy;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
 import com.amazonaws.xray.strategy.sampling.rule.CentralizedRule;
@@ -88,14 +89,14 @@ public class CentralizedManifest implements Manifest {
         return defaultRule;
     }
 
-    public void putRules(List<SamplingRule> inputs, Instant now) {
+    public void putRules(List<GetSamplingRulesResponse.SamplingRule> inputs, Instant now) {
         // Set to true if we see a new or deleted rule or a change in the priority of an existing rule.
         boolean invalidate = false;
 
         Map<String, CentralizedRule> rules = this.rules;
         List<String> inputNames = new ArrayList<>(inputs.size());
 
-        for (SamplingRule i : inputs) {
+        for (GetSamplingRulesResponse.SamplingRule i : inputs) {
             if (i.getRuleName().equals(CentralizedRule.DEFAULT_RULE_NAME)) {
                 putDefaultRule(i);
             } else {
@@ -130,14 +131,30 @@ public class CentralizedManifest implements Manifest {
             }
 
             SamplingStatisticsDocument snapshot = rule.snapshot(date);
-            snapshot.withClientID(CentralizedSamplingStrategy.getClientID());
+            snapshot = SamplingStatisticsDocument.newBuilder()
+                    .setSampledCount(snapshot.getSampledCount())
+                    .setBorrowCount(snapshot.getBorrowCount())
+                    .setClientId(CentralizedSamplingStrategy.getClientID())
+                    .setRequestCount(snapshot.getRequestCount())
+                    .setRuleName(snapshot.getRuleName())
+                    .setSampledCount(snapshot.getSampledCount())
+                    .setTimestamp(snapshot.getTimestamp())
+                    .build();
 
             snapshots.add(snapshot);
         }
 
         if (defaultRule != null && defaultRule.isStale(now)) {
-            SamplingStatisticsDocument snapshot = defaultRule.snapshot(date);
-            snapshot.withClientID(CentralizedSamplingStrategy.getClientID());
+            GetSamplingTargetsRequest.SamplingStatisticsDocument snapshot = defaultRule.snapshot(date);
+            snapshot = SamplingStatisticsDocument.newBuilder()
+                    .setSampledCount(snapshot.getSampledCount())
+                    .setBorrowCount(snapshot.getBorrowCount())
+                    .setClientId(CentralizedSamplingStrategy.getClientID())
+                    .setRequestCount(snapshot.getRequestCount())
+                    .setRuleName(snapshot.getRuleName())
+                    .setSampledCount(snapshot.getSampledCount())
+                    .setTimestamp(snapshot.getTimestamp())
+                    .build();
 
             snapshots.add(snapshot);
         }
@@ -145,10 +162,10 @@ public class CentralizedManifest implements Manifest {
         return snapshots;
     }
 
-    public void putTargets(List<SamplingTargetDocument> targets, Instant now) {
+    public void putTargets(List<GetSamplingTargetsResponse.SamplingTargetDocument> targets, Instant now) {
         Map<String, CentralizedRule> rules = this.rules;
 
-        for (SamplingTargetDocument t : targets) {
+        for (GetSamplingTargetsResponse.SamplingTargetDocument t : targets) {
             CentralizedRule r = null;
 
             if (rules.containsKey(t.getRuleName())) {
@@ -165,7 +182,7 @@ public class CentralizedManifest implements Manifest {
         }
     }
 
-    private boolean putCustomRule(Map<String, CentralizedRule> rules, SamplingRule i) {
+    private boolean putCustomRule(Map<String, CentralizedRule> rules, GetSamplingRulesResponse.SamplingRule i) {
         CentralizedRule r = rules.get(i.getRuleName());
         if (r == null) {
             return true;
@@ -174,7 +191,7 @@ public class CentralizedManifest implements Manifest {
         return r.update(i);
     }
 
-    private void putDefaultRule(SamplingRule i) {
+    private void putDefaultRule(GetSamplingRulesResponse.SamplingRule i) {
         if (defaultRule == null) {
             defaultRule = new CentralizedRule(i, new RandImpl());
         } else {
@@ -182,10 +199,11 @@ public class CentralizedManifest implements Manifest {
         }
     }
 
-    LinkedHashMap<String, CentralizedRule> rebuild(Map<String, CentralizedRule> old, List<SamplingRule> inputs) {
+    LinkedHashMap<String, CentralizedRule> rebuild(Map<String, CentralizedRule> old,
+        List<GetSamplingRulesResponse.SamplingRule> inputs) {
         List<CentralizedRule> rules = new ArrayList<>(inputs.size() - 1);
 
-        for (SamplingRule i : inputs) {
+        for (GetSamplingRulesResponse.SamplingRule i : inputs) {
             if (i.getRuleName().equals(CentralizedRule.DEFAULT_RULE_NAME)) {
                 continue;
             }

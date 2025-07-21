@@ -15,12 +15,9 @@
 
 package com.amazonaws.xray.strategy.sampling.pollers;
 
-import com.amazonaws.services.xray.AWSXRay;
-import com.amazonaws.services.xray.model.GetSamplingRulesRequest;
-import com.amazonaws.services.xray.model.GetSamplingRulesResult;
-import com.amazonaws.services.xray.model.SamplingRule;
-import com.amazonaws.services.xray.model.SamplingRuleRecord;
 import com.amazonaws.xray.internal.UnsignedXrayClient;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
 import com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifest;
 import com.amazonaws.xray.strategy.sampling.rand.Rand;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
@@ -55,7 +52,7 @@ public class RulePoller {
      * @deprecated Use {@link #RulePoller(UnsignedXrayClient, CentralizedManifest, Clock)}.
      */
     @Deprecated
-    public RulePoller(CentralizedManifest manifest, AWSXRay unused, Clock clock) {
+    public RulePoller(CentralizedManifest manifest, Object unused, Clock clock) {
         this(new UnsignedXrayClient(), manifest, clock);
     }
 
@@ -96,11 +93,11 @@ public class RulePoller {
         Instant now = clock.instant();
 
         logger.info("Polling sampling rules.");
-        GetSamplingRulesRequest req = new GetSamplingRulesRequest();
-        GetSamplingRulesResult records = client.getSamplingRules(req);
-        List<SamplingRule> rules = records.getSamplingRuleRecords()
+        GetSamplingRulesRequest req = GetSamplingRulesRequest.create(null);
+        GetSamplingRulesResponse records = client.getSamplingRules(req);
+        List<GetSamplingRulesResponse.SamplingRule> rules = records.getSamplingRules()
                 .stream()
-                .map(SamplingRuleRecord::getSamplingRule)
+                .map(GetSamplingRulesResponse.SamplingRuleRecord::getRule)
                 .filter(CentralizedRule::isValid)
                 .collect(Collectors.toList());
 
