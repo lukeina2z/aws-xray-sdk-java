@@ -15,6 +15,10 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin")
 }
 
+allprojects {
+    version = "2.99.99"
+}
+
 tasks {
     val prepareRelease by registering {
         doLast {
