@@ -258,11 +258,8 @@ public class CentralizedRuleTest {
         GetSamplingRulesResponse.SamplingRule input = createInput("r1", 300, 10, 0.0);
         CentralizedRule r = new CentralizedRule(input, new RandImpl());
 
-        GetSamplingTargetsResponse.SamplingTargetDocument update = GetSamplingTargetsResponse.SamplingTargetDocument.create(0.5, 20, null, null, "r1");
-            // .ruleName("r1")
-            // .fixedRate(0.5)
-            // .interval(20)
-            // .build();
+        GetSamplingTargetsResponse.SamplingTargetDocument update = GetSamplingTargetsResponse.SamplingTargetDocument.create(0.5,
+            20, null, null, "r1");
 
         r.update(update, Instant.now());
 
@@ -277,26 +274,15 @@ public class CentralizedRuleTest {
 
     public static GetSamplingRulesResponse.SamplingRule createInput(String name, int priority, int capacity, double rate,
         String httpMethod, String serviceName, String urlPath) {
-        GetSamplingRulesResponse.SamplingRule input = GetSamplingRulesResponse.SamplingRule.create(null, rate, null, httpMethod, priority, capacity, null, null, name, serviceName, null, urlPath, null);
-            // .ruleName(name)
-            // .priority(priority)
-            // .fixedRate(rate)
-            // .reservoirSize(capacity)
-            // .httpMethod(httpMethod)
-            // .serviceName(serviceName)
-            // .urlPath(ulrPath)
-            // .build();
+        GetSamplingRulesResponse.SamplingRule input = GetSamplingRulesResponse.SamplingRule.create(null, rate, null, httpMethod,
+            priority, capacity, null, null, name, serviceName, null, urlPath, null);
 
         return input;
     }
 
     public static GetSamplingTargetsResponse.SamplingTargetDocument createTarget(int quota, double rate, long expiresAt) {
-        GetSamplingTargetsResponse.SamplingTargetDocument target = GetSamplingTargetsResponse.SamplingTargetDocument.create(rate, 10, quota, Date.from(Instant.ofEpochSecond(expiresAt)), null);
-            // .reservoirQuota(quota)
-            // .reservoirQuotaTTL(Date.from(Instant.ofEpochSecond(expiresAt)).toInstant())
-            // .fixedRate(rate)
-            // .interval(10)
-            // .build();
+        GetSamplingTargetsResponse.SamplingTargetDocument target = GetSamplingTargetsResponse.SamplingTargetDocument.create(rate,
+            10, quota, Date.from(Instant.ofEpochSecond(expiresAt)), null);
 
         return target;
     }

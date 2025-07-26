@@ -15,6 +15,7 @@
 
 package com.amazonaws.xray.strategy.sampling.rule;
 
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,15 +26,9 @@ class MatchersTest {
 
     @Test
     void testSimpleMatch() {
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(null)
-            .host("192.168.1.1")
-            .serviceName("www.foo.com")
-            .httpMethod("POST")
-            .resourceARN("arn:aws:service:us-east-1:111111111111:resource")
-            .urlPath("/bar/123")
-            .serviceType("AWS::EC2::Instance")
-            .build();
+        SamplingRule rule = SamplingRule.create(null, null, "192.168.1.1", "POST", null, null,
+            "arn:aws:service:us-east-1:111111111111:resource", null,
+            null, "www.foo.com", "AWS::EC2::Instance", "/bar/123", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",
@@ -53,15 +48,9 @@ class MatchersTest {
 
     @Test
     void testSimpleMismatch() {
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(null)
-            .host("192.168.1.1")
-            .serviceName("www.foo.com")
-            .httpMethod("POST")
-            .resourceARN("arn:aws:service:us-east-1:111111111111:resource")
-            .urlPath("/bar/123")
-            .serviceType("AWS::EC2::Instance")
-            .build();
+        SamplingRule rule = SamplingRule.create(null, null, "192.168.1.1", "POST", null, null,
+            "arn:aws:service:us-east-1:111111111111:resource", null,
+            null, "www.foo.com", "AWS::EC2::Instance", "/bar/123", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",
@@ -90,15 +79,8 @@ class MatchersTest {
         reqAttributes.put("compression", "gzip");
         reqAttributes.put("encoding", "json");
 
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(ruleAttributes)
-            .host("*")
-            .serviceName("*")
-            .httpMethod("*")
-            .resourceARN("*")
-            .urlPath("*")
-            .serviceType("*")
-            .build();
+        SamplingRule rule = SamplingRule.create(ruleAttributes, null, "*", "*", null, null, "*",
+            null, null, "*", "*", "*", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",
@@ -127,15 +109,8 @@ class MatchersTest {
         reqAttributes.put("compression", "gzip");
         reqAttributes.put("encoding", "json");
 
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(ruleAttributes)
-            .host("*")
-            .serviceName("*.foo.*")
-            .httpMethod("*")
-            .resourceARN("*")
-            .urlPath("/bar/*")
-            .serviceType("AWS::EC2::Instance")
-            .build();
+        SamplingRule rule = SamplingRule.create(ruleAttributes, null, "*", "*", null, null, "*",
+            null, null, "*.foo.*", "AWS::EC2::Instance", "/bar/*", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",
@@ -155,15 +130,8 @@ class MatchersTest {
 
     @Test
     void testPartialGlobMismatch() {
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(null)
-            .host("*")
-            .serviceName("*.foo.*")
-            .httpMethod("*")
-            .resourceARN("*")
-            .urlPath("/bar/*")
-            .serviceType("AWS::EC2::Instance")
-            .build();
+        SamplingRule rule = SamplingRule.create(null, null, "*", "*", null, null, "*",
+            null, null, "*.foo.*", "AWS::EC2::Instance", "/bar/*", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",
@@ -192,15 +160,8 @@ class MatchersTest {
         reqAttributes.put("compression", "gzip");
         reqAttributes.put("encoding", "json");
 
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(ruleAttributes)
-            .host("*")
-            .serviceName("*")
-            .httpMethod("*")
-            .resourceARN("*")
-            .urlPath("*")
-            .serviceType("AWS::EC2::Instance")
-            .build();
+        SamplingRule rule = SamplingRule.create(ruleAttributes, null, "*", "*", null, null, "*",
+            null, null, "*", "AWS::EC2::Instance", "*", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",
@@ -220,15 +181,9 @@ class MatchersTest {
 
     @Test
     void testPartialRequestMismatch() {
-        SamplingRule rule = SamplingRule.builder()
-            .attributes(null)
-            .host("192.168.1.1")
-            .serviceName("www.foo.com")
-            .httpMethod("POST")
-            .resourceARN("arn:aws:service:us-east-1:111111111111:resource")
-            .urlPath("/bar/123")
-            .serviceType("AWS::EC2::Instance")
-            .build();
+        SamplingRule rule = SamplingRule.create(null, null, "192.168.1.1", "POST", null, null,
+            "arn:aws:service:us-east-1:111111111111:resource", null,
+            null, "www.foo.com", "AWS::EC2::Instance", "/bar/123", null);
 
         SamplingRequest req = new SamplingRequest(
             "role-arn",

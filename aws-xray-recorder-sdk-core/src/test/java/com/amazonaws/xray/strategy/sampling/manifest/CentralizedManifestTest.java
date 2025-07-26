@@ -15,10 +15,8 @@
 
 package com.amazonaws.xray.strategy.sampling.manifest;
 
-import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
-import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
 import com.amazonaws.xray.strategy.sampling.rule.CentralizedRule;
@@ -79,18 +77,8 @@ class CentralizedManifestTest {
 
         CentralizedManifest manifest = new CentralizedManifest();
 
-        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
-            .ruleName("r1")
-            .priority(10)
-            .reservoirSize(20)
-            .fixedRate(0.05)
-            .host("*")
-            .serviceName("*")
-            .httpMethod("*")
-            .urlPath("*")
-            .resourceARN("*")
-            .serviceType("*")
-            .build();
+        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.create(null, 0.05, "*", "*", 10,
+             20, "*", null, "r1", "*", "*", "*", null);
 
         manifest.putRules(Arrays.asList(r1), now);
 
@@ -114,11 +102,8 @@ class CentralizedManifestTest {
 
         CentralizedManifest manifest = new CentralizedManifest();
 
-        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.builder()
-            .ruleName(CentralizedRule.DEFAULT_RULE_NAME)
-            .reservoirSize(20)
-            .fixedRate(0.05)
-            .build();
+        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.create(null, 0.05, null, null, null, 20,
+             null, null, CentralizedRule.DEFAULT_RULE_NAME, null, null, null, null);
 
         manifest.putRules(Arrays.asList(rule(new RuleParams("r1")), r2), now);
 
@@ -144,18 +129,8 @@ class CentralizedManifestTest {
         CentralizedManifest manifest = new CentralizedManifest();
 
         // Liberal sampling rule
-        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
-            .ruleName("r1")
-            .priority(10)
-            .reservoirSize(20)
-            .fixedRate(0.05)
-            .host("*")
-            .serviceName("*")
-            .httpMethod("*")
-            .urlPath("*")
-            .resourceARN("*")
-            .serviceType("*")
-            .build();
+        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.create(null, 0.05, "*", "*", 10, 20,
+             "*", null, "r1", "*", "*", "*", null);
 
         manifest.putRules(Arrays.asList(r1), now);
 
@@ -253,11 +228,8 @@ class CentralizedManifestTest {
     void testManifestSizeWithDefaultRule() {
         CentralizedManifest m = new CentralizedManifest();
 
-        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.builder()
-            .ruleName(CentralizedRule.DEFAULT_RULE_NAME)
-            .reservoirSize(20)
-            .fixedRate(0.05)
-            .build();
+        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.create(null, 0.05, null, null, null, 20,
+             null, null, CentralizedRule.DEFAULT_RULE_NAME, null, null, null, null);
 
         RuleParams paramsR1 = new RuleParams("r1");
         m.putRules(Arrays.asList(rule(paramsR1), r2), Instant.now());
@@ -269,11 +241,8 @@ class CentralizedManifestTest {
     void testManifestSizeWithoutDefaultRule() {
         CentralizedManifest m = new CentralizedManifest();
 
-        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
-            .ruleName(CentralizedRule.DEFAULT_RULE_NAME)
-            .reservoirSize(20)
-            .fixedRate(0.05)
-            .build();
+        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.create(null, 0.05, null, null, null, 20,
+            null, null, CentralizedRule.DEFAULT_RULE_NAME, null, null, null, null);
 
         m.putRules(Arrays.asList(r1), Instant.now());
 
@@ -371,18 +340,10 @@ class CentralizedManifestTest {
         }
     }
 
-    private GetSamplingRulesResponse.SamplingRule rule(RuleParams parmas) {
-        GetSamplingRulesResponse.SamplingRule r = GetSamplingRulesResponse.SamplingRule.builder()
-            .ruleName(parmas.name)
-            .priority(parmas.priority)
-            .reservoirSize(parmas.reservoirSize)
-            .fixedRate(parmas.fixedRate)
-            .host(parmas.host)
-            .serviceName(parmas.serviceName)
-            .httpMethod(parmas.httpMethod)
-            .urlPath(parmas.urlPath)
-            .resourceARN(parmas.resourceArn)
-            .build();
+    private GetSamplingRulesResponse.SamplingRule rule(RuleParams params) {
+        GetSamplingRulesResponse.SamplingRule r = GetSamplingRulesResponse.SamplingRule.create(null, params.fixedRate,
+            params.host, params.httpMethod, params.priority, params.reservoirSize, params.resourceArn, null,
+            params.name, params.serviceName, null, params.urlPath, null);
 
         return r;
     }

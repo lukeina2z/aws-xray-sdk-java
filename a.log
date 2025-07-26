@@ -1,133 +1,133 @@
 + ./gradlew build -Dorg.gradle.jvmargs=-XX:MaxMetaspaceSize=2096m
 
 > Configure project :
-Inferred project: aws-xray-sdk-java-2.18.199, version: 2.8.0-dev.131.uncommitted+0a64f56
+Inferred project: aws-xray-sdk-java-2.18.199, version: 2.8.0-dev.123.uncommitted+ff0ff69
 
 > Task :aws-xray-recorder-sdk-benchmark:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:generateProperties
 > Task :aws-xray-recorder-sdk-apache-http:generateProperties
 > Task :aws-xray-recorder-sdk-aws-sdk:generateProperties
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:generateProperties
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:generateProperties
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:generateProperties
+> Task :aws-xray-recorder-sdk-log4j:generateProperties
+> Task :aws-xray-recorder-sdk-metrics:generateProperties
+> Task :aws-xray-recorder-sdk-slf4j:generateProperties
 > Task :aws-xray-recorder-sdk-apache-http:processResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-benchmark:processResources UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:processResources UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:generateProperties
-> Task :aws-xray-recorder-sdk-log4j:generateProperties
-> Task :aws-xray-recorder-sdk-benchmark:classes UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processResources UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:generateProperties
-> Task :aws-xray-recorder-sdk-spring:generateProperties
-> Task :aws-xray-recorder-sdk-metrics:processResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-benchmark:javadoc NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:processResources UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:processResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processResources UP-TO-DATE
 > Task :aws-xray-recorder-sdk-log4j:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:classes UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:generateProperties
+> Task :aws-xray-recorder-sdk-sql-mysql:generateProperties
 > Task :aws-xray-recorder-sdk-slf4j:processResources NO-SOURCE
-> Task :check UP-TO-DATE
 > Task :aws-xray-recorder-sdk-sql:generateProperties
-> Task :aws-xray-recorder-sdk-sql:processResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-sql-postgres:generateProperties
 > Task :jacoco:generateProperties
-> Task :aws-xray-recorder-sdk-sql-mysql:generateProperties
+> Task :aws-xray-recorder-sdk-sql-mysql:processResources NO-SOURCE
+> Task :check UP-TO-DATE
 > Task :smoke-tests:generateProperties
 > Task :aws-xray-recorder-sdk-sql-postgres:processResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-sql-mysql:processResources NO-SOURCE
+> Task :smoke-tests:processResources NO-SOURCE
+> Task :jacoco:processResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-bom:assemble UP-TO-DATE
 > Task :aws-xray-recorder-sdk-bom:check UP-TO-DATE
 > Task :aws-xray-recorder-sdk-bom:build UP-TO-DATE
-> Task :smoke-tests:processResources NO-SOURCE
-> Task :jacoco:processResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:processResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:processResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:sourcesJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-apache-http:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-benchmark:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-benchmark:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-log4j:sourcesJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-benchmark:licenseJmh UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:licenseTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:licenseTest NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:license UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-log4j:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-benchmark:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:licenseTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-benchmark:licenseTest NO-SOURCE
-> Task :aws-xray-recorder-sdk-slf4j:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-metrics:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-benchmark:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:licenseJmh UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-benchmark:compileTestJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:licenseTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-log4j:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:licenseTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-benchmark:licenseTest NO-SOURCE
+> Task :aws-xray-recorder-sdk-metrics:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:license UP-TO-DATE
 > Task :aws-xray-recorder-sdk-log4j:licenseTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-log4j:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-benchmark:compileTestJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-metrics:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-spring:sourcesJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-benchmark:processTestResources NO-SOURCE
-> Task :dependencyManagement:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-benchmark:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:licenseTest NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-sql:sourcesJar UP-TO-DATE
-> Task :dependencyManagement:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-benchmark:test NO-SOURCE
+> Task :aws-xray-recorder-sdk-slf4j:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-benchmark:check UP-TO-DATE
 > Task :aws-xray-recorder-sdk-benchmark:build UP-TO-DATE
 > Task :aws-xray-recorder-sdk-metrics:licenseTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:licenseTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:processTestResources NO-SOURCE
-> Task :dependencyManagement:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-spring:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-sql-postgres:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-metrics:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:licenseTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:processTestResources NO-SOURCE
-> Task :smoke-tests:sourcesJar UP-TO-DATE
+> Task :dependencyManagement:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:processTestResources NO-SOURCE
+> Task :dependencyManagement:check UP-TO-DATE
+> Task :dependencyManagement:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:sourcesJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-spring:licenseMain UP-TO-DATE
-> Task :jacoco:sourcesJar UP-TO-DATE
-> Task :smoke-tests:processTestResources NO-SOURCE
-> Task :jacoco:processTestResources NO-SOURCE
-> Task :smoke-tests:licenseMain NO-SOURCE
-> Task :jacoco:licenseMain NO-SOURCE
+> Task :aws-xray-recorder-sdk-slf4j:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:processTestResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-sql-postgres:licenseMain UP-TO-DATE
-> Task :smoke-tests:licenseTest UP-TO-DATE
-> Task :smoke-tests:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:licenseTest UP-TO-DATE
-> Task :jacoco:licenseTest NO-SOURCE
-> Task :aws-xray-recorder-sdk-sql-mysql:license UP-TO-DATE
-> Task :jacoco:license UP-TO-DATE
 > Task :aws-xray-recorder-sdk-spring:licenseTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-spring:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:licenseMain UP-TO-DATE
+> Task :jacoco:sourcesJar UP-TO-DATE
+> Task :jacoco:processTestResources NO-SOURCE
+> Task :jacoco:licenseMain NO-SOURCE
 > Task :aws-xray-recorder-sdk-sql-postgres:licenseTest UP-TO-DATE
+> Task :jacoco:licenseTest NO-SOURCE
 > Task :aws-xray-recorder-sdk-sql-postgres:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:compileJava UP-TO-DATE
+> Task :smoke-tests:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:license UP-TO-DATE
+> Task :smoke-tests:processTestResources NO-SOURCE
+> Task :smoke-tests:licenseMain NO-SOURCE
+> Task :jacoco:license UP-TO-DATE
+> Task :smoke-tests:licenseTest UP-TO-DATE
+> Task :smoke-tests:license UP-TO-DATE
 > Task :aws-xray-recorder-sdk-lambda:compileJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:generateProperties
+> Task :aws-xray-recorder-sdk-aws-sdk-core:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-core:generateProperties
+> Task :aws-xray-recorder-sdk-lambda:generateProperties
 > Task :aws-xray-recorder-sdk-lambda:processResources NO-SOURCE
 > Task :aws-xray-recorder-sdk-lambda:classes
 > Task :aws-xray-recorder-sdk-aws-sdk-core:processResources UP-TO-DATE
@@ -136,195 +136,198 @@ Inferred project: aws-xray-sdk-java-2.18.199, version: 2.8.0-dev.131.uncommitted
 > Task :aws-xray-recorder-sdk-lambda:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-core:jar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-lambda:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-lambda:javadocJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-core:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-core:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-core:generateProperties
 > Task :aws-xray-recorder-sdk-core:processResources UP-TO-DATE
+> Task :smoke-tests:compileJava NO-SOURCE
+> Task :smoke-tests:classes
 > Task :aws-xray-recorder-sdk-core:classes
+> Task :smoke-tests:javadoc NO-SOURCE
 > Task :aws-xray-recorder-sdk-core:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:assemble UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:classes
 > Task :aws-xray-recorder-sdk-metrics:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-metrics:classes
 > Task :aws-xray-recorder-sdk-apache-http:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-metrics:javadoc UP-TO-DATE
-> Task :smoke-tests:compileJava NO-SOURCE
-> Task :smoke-tests:classes
-> Task :smoke-tests:javadoc NO-SOURCE
 > Task :aws-xray-recorder-sdk-apache-http:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-core:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-core:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-core:sourcesJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-core:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:compileJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:compileJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:classes
-> Task :aws-xray-recorder-sdk-log4j:classes
-> Task :aws-xray-recorder-sdk-sql:javadoc UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:javadoc UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:sourcesJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:assemble UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:classes
-> Task :aws-xray-recorder-sdk-log4j:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:classes
+> Task :aws-xray-recorder-sdk-slf4j:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:jar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-metrics:javadocJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-metrics:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:javadoc UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:compileJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:classes
-> Task :aws-xray-recorder-sdk-core:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:compileJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:classes
+> Task :aws-xray-recorder-sdk-sql:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:classes
-> Task :aws-xray-recorder-sdk-lambda:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:javadocJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:javadoc UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:checkstyleMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk:classes
-> Task :aws-xray-recorder-sdk-aws-sdk:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:checkstyleMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:compileJava NO-SOURCE
+> Task :aws-xray-recorder-sdk-lambda:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:classes
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadoc NO-SOURCE
+> Task :aws-xray-recorder-sdk-sql-postgres:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:classes
 > Task :aws-xray-recorder-sdk-aws-sdk:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:jar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk:javadocJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:assemble UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2:compileJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2:classes
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadoc UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:checkstyleMain NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:compileJava NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:classes
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:javadoc NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:checkstyleMain NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:compileTestJava NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:testClasses UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:checkstyleTest NO-SOURCE
-> Task :aws-xray-recorder-sdk-spring:compileJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:test NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:compileTestJava UP-TO-DATE
-> Task :jacoco:compileJava NO-SOURCE
-> Task :jacoco:classes
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:jar UP-TO-DATE
-> Task :jacoco:javadoc NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:check UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-instrumentor:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:processTestResources UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:classes
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:compileJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:classes
 > Task :aws-xray-recorder-sdk-spring:javadoc UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:javadocJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:licenseMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:licenseTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:license UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:assemble UP-TO-DATE
+> Task :jacoco:compileJava NO-SOURCE
+> Task :jacoco:classes
+> Task :jacoco:javadoc NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:javadocJar UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:processTestResources NO-SOURCE
-> Task :aws-xray-recorder-sdk-lambda:testClasses UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:checkstyleMain NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:javadoc UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:compileTestJava NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:testClasses UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:checkstyleTest NO-SOURCE
-> Task :aws-xray-recorder-sdk-lambda:checkstyleTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:test NO-SOURCE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:check UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2-instrumentor:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:checkstyleMain UP-TO-DATE
+> Task :aggregateJavadoc UP-TO-DATE
+> Task :aggregateJavadocJar UP-TO-DATE
+> Task :assemble UP-TO-DATE
+> Task :build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:processTestResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:processTestResources NO-SOURCE
+> Task :aws-xray-recorder-sdk-lambda:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:licenseMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:checkstyleTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-lambda:licenseMain UP-TO-DATE
 > Task :aws-xray-recorder-sdk-lambda:licenseTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-lambda:license UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:checkstyleTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:compileTestJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-slf4j:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:assemble UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:checkstyleMain UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-lambda:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-slf4j:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-metrics:build UP-TO-DATE
 > Task :aws-xray-recorder-sdk-spring:compileTestJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-spring:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-core:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-log4j:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:checkstyleTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-spring:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:jar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:javadocJar UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:assemble UP-TO-DATE
-> Task :smoke-tests:jar UP-TO-DATE
-> Task :smoke-tests:javadocJar UP-TO-DATE
-> Task :smoke-tests:assemble UP-TO-DATE
-> Task :smoke-tests:checkstyleMain NO-SOURCE
-> Task :aws-xray-recorder-sdk-aws-sdk:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-lambda:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-spring:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-core:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-log4j:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-mysql:build UP-TO-DATE
 > Task :jacoco:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:test UP-TO-DATE
+> Task :smoke-tests:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:jar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-slf4j:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:compileTestJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-aws-sdk-v2:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:compileTestJava UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-apache-http:checkstyleTest UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:testClasses UP-TO-DATE
 > Task :jacoco:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:javadocJar UP-TO-DATE
 > Task :jacoco:assemble UP-TO-DATE
+> Task :smoke-tests:javadocJar UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:assemble UP-TO-DATE
+> Task :smoke-tests:assemble UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-metrics:build UP-TO-DATE
+> Task :smoke-tests:checkstyleMain NO-SOURCE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:checkstyleTest UP-TO-DATE
 > Task :jacoco:checkstyleMain NO-SOURCE
 > Task :jacoco:compileTestJava NO-SOURCE
 > Task :jacoco:testClasses UP-TO-DATE
@@ -332,134 +335,334 @@ Inferred project: aws-xray-sdk-java-2.18.199, version: 2.8.0-dev.131.uncommitted
 > Task :jacoco:test NO-SOURCE
 > Task :jacoco:check UP-TO-DATE
 > Task :jacoco:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-mysql:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-spring:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:checkstyleMain UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:compileTestJava UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:testClasses UP-TO-DATE
+> Task :aws-xray-recorder-sdk-apache-http:checkstyleTest UP-TO-DATE
 > Task :smoke-tests:compileTestJava UP-TO-DATE
 > Task :smoke-tests:testClasses UP-TO-DATE
 > Task :aws-xray-recorder-sdk-sql-postgres:compileTestJava UP-TO-DATE
 > Task :aws-xray-recorder-sdk-sql-postgres:testClasses UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk:build UP-TO-DATE
 > Task :smoke-tests:checkstyleTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:checkstyleTest UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:test UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:check UP-TO-DATE
 > Task :aws-xray-recorder-sdk-apache-http:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-sql-postgres:build UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:test UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:check UP-TO-DATE
-> Task :aws-xray-recorder-sdk-aws-sdk-v2:build UP-TO-DATE
 > Task :smoke-tests:test UP-TO-DATE
 > Task :smoke-tests:check UP-TO-DATE
 > Task :smoke-tests:build UP-TO-DATE
-> Task :aggregateJavadoc UP-TO-DATE
-> Task :aggregateJavadocJar UP-TO-DATE
-> Task :assemble UP-TO-DATE
-> Task :build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:test UP-TO-DATE
+> Task :aws-xray-recorder-sdk-sql-postgres:build UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:check UP-TO-DATE
+> Task :aws-xray-recorder-sdk-aws-sdk-v2:build UP-TO-DATE
 
-> Task :aws-xray-recorder-sdk-core:compileTestJava FAILED
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/manifest/CentralizedManifestTest.java:82: error: cannot find symbol
-        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
-                                                                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/manifest/CentralizedManifestTest.java:117: error: cannot find symbol
-        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.builder()
-                                                                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/manifest/CentralizedManifestTest.java:147: error: cannot find symbol
-        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
-                                                                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/manifest/CentralizedManifestTest.java:256: error: cannot find symbol
-        GetSamplingRulesResponse.SamplingRule r2 = GetSamplingRulesResponse.SamplingRule.builder()
-                                                                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/manifest/CentralizedManifestTest.java:272: error: cannot find symbol
-        GetSamplingRulesResponse.SamplingRule r1 = GetSamplingRulesResponse.SamplingRule.builder()
-                                                                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/manifest/CentralizedManifestTest.java:375: error: cannot find symbol
-        GetSamplingRulesResponse.SamplingRule r = GetSamplingRulesResponse.SamplingRule.builder()
-                                                                                       ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:28: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:49: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:56: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:77: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:93: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:114: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:130: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:151: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:158: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:179: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:195: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:216: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:223: error: cannot find symbol
-        SamplingRule rule = SamplingRule.builder()
-                                        ^
-  symbol:   method builder()
-  location: class SamplingRule
-/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/MatchersTest.java:244: error: incompatible types: com.amazonaws.xray.strategy.sampling.rule.SamplingRule cannot be converted to com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule
-        Matchers m = new Matchers(rule);
-                                  ^
+> Task :aws-xray-recorder-sdk-core:compileTestJava
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:83: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+        recorder.setTraceEntity(current);
+                               ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+  Did you mean 'verify(recorder).setTraceEntity(current);' or ';'?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:89: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+        recorder.setTraceEntity(null);
+                               ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+  Did you mean 'verify(recorder).setTraceEntity(null);' or ';'?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:108: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+        assertThat(recorder.getTraceEntity()).isEqualTo(current);
+                                          ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:116: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+                recorder.setTraceEntity(previous);
+                                       ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+  Did you mean 'verify(recorder).setTraceEntity(previous);' or ';'?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:129: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+                assertThat(recorder.getTraceEntity()).isEqualTo(mounted);
+                                                  ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:133: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+                assertThat(recorder.getTraceEntity()).isEqualTo(previous);
+                                                  ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/contexts/SegmentContextExecutorsTest.java:139: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `recorder`. Should this be part of a verify(..) call?
+        assertThat(recorder.getTraceEntity()).isEqualTo(current);
+                                          ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/javax/servlet/AWSXRayServletFilterTest.java:107: warning: [MockNotUsedInProduction] This mock is instantiated and configured, but is never passed to production code. It should be either removed or used.
+        AsyncEvent event = mock(AsyncEvent.class);
+                   ^
+    (see https://errorprone.info/bugpattern/MockNotUsedInProduction)
+  Did you mean to remove this line?
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/CentralizedRuleTest.java:174: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `clock`. Should this be part of a verify(..) call?
+        rule.update(target, clock.instant());
+                                         ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/CentralizedRuleTest.java:176: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `clock`. Should this be part of a verify(..) call?
+        rule.sample(clock.instant());
+                                 ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
+/Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/src/test/java/com/amazonaws/xray/strategy/sampling/rule/CentralizedRuleTest.java:184: warning: [DirectInvocationOnMock] Methods should not be directly invoked on the mock `clock`. Should this be part of a verify(..) call?
+        rule.sample(clock.instant());
+                                 ^
+    (see https://errorprone.info/bugpattern/DirectInvocationOnMock)
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-20 errors
+11 warnings
+
+> Task :aws-xray-recorder-sdk-core:processTestResources UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:testClasses
+> Task :aws-xray-recorder-sdk-core:checkstyleTest
+> Task :aws-xray-recorder-sdk-core:licenseMain UP-TO-DATE
+Unknown file extension: aws-xray-recorder-sdk-core/src/test/resources/com/amazonaws/xray/utils/invalidCgroup
+Unknown file extension: aws-xray-recorder-sdk-core/src/test/resources/com/amazonaws/xray/utils/validSecondCgroup
+Unknown file extension: aws-xray-recorder-sdk-core/src/test/resources/com/amazonaws/xray/utils/emptyCgroup
+Unknown file extension: aws-xray-recorder-sdk-core/src/test/resources/com/amazonaws/xray/utils/validCgroup
+> Task :aws-xray-recorder-sdk-core:licenseTest UP-TO-DATE
+> Task :aws-xray-recorder-sdk-core:license UP-TO-DATE
+
+> Task :aws-xray-recorder-sdk-core:test
+
+CentralizedManifestTest > testPutRules() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testPutRules(CentralizedManifestTest.java:132)
+
+CentralizedManifestTest > testPutRulesWithoutRebuild() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testPutRulesWithoutRebuild(CentralizedManifestTest.java:172)
+
+CentralizedManifestTest > testRebuildOnNewRule() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testRebuildOnNewRule(CentralizedManifestTest.java:155)
+
+CentralizedManifestTest > testSnapshotsWithDefaultRule() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testSnapshotsWithDefaultRule(CentralizedManifestTest.java:261)
+
+CentralizedManifestTest > testPositiveMatch() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testPositiveMatch(CentralizedManifestTest.java:80)
+
+CentralizedManifestTest > testRebuild() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testRebuild(CentralizedManifestTest.java:303)
+
+CentralizedManifestTest > testManifestSizeWithDefaultRule() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testManifestSizeWithDefaultRule(CentralizedManifestTest.java:231)
+
+CentralizedManifestTest > testManifestSizeWithoutDefaultRule() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testManifestSizeWithoutDefaultRule(CentralizedManifestTest.java:244)
+
+CentralizedManifestTest > testSnapshotsWithoutDefaultRule() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testSnapshotsWithoutDefaultRule(CentralizedManifestTest.java:285)
+
+CentralizedManifestTest > testExpirationForNewlyRefreshedManifest() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testExpirationForNewlyRefreshedManifest(CentralizedManifestTest.java:54)
+
+CentralizedManifestTest > testExpirationForOldManifest() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testExpirationForOldManifest(CentralizedManifestTest.java:65)
+
+CentralizedManifestTest > testRebuildOnRuleDeletion() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testRebuildOnRuleDeletion(CentralizedManifestTest.java:214)
+
+CentralizedManifestTest > testPositiveDefaultRuleMatch() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testPositiveDefaultRuleMatch(CentralizedManifestTest.java:105)
+
+CentralizedManifestTest > testRebuildOnPriorityChange() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.rule(CentralizedManifestTest.java:344)
+        at com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifestTest.testRebuildOnPriorityChange(CentralizedManifestTest.java:191)
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Thread-4"
+
+MatchersTest > testSimpleMatch() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testSimpleMatch(MatchersTest.java:29)
+
+MatchersTest > testPartialGlobMismatch() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testPartialGlobMismatch(MatchersTest.java:133)
+
+MatchersTest > testSimpleMismatch() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testSimpleMismatch(MatchersTest.java:51)
+
+MatchersTest > testPartialAttributeGlobMismatch() FAILED
+    java.lang.NullPointerException: Null fixedRate
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:56)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testPartialAttributeGlobMismatch(MatchersTest.java:163)
+
+MatchersTest > testPartialGlobMatch() FAILED
+    java.lang.NullPointerException: Null fixedRate
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:56)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testPartialGlobMatch(MatchersTest.java:112)
+
+MatchersTest > testPartialRequestMismatch() FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testPartialRequestMismatch(MatchersTest.java:184)
+
+MatchersTest > testFullGlobMatch() FAILED
+    java.lang.NullPointerException: Null fixedRate
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:56)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.MatchersTest.testFullGlobMatch(MatchersTest.java:82)
+
+UnsignedXrayClientTest > getSamplingTargets FAILED
+    java.lang.IllegalStateException: Missing required properties: borrowCount requestCount ruleName sampledCount timestamp
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingTargetsRequest_SamplingStatisticsDocument$Builder.build(AutoValue_GetSamplingTargetsRequest_SamplingStatisticsDocument.java:196)
+        at com.amazonaws.xray.internal.UnsignedXrayClientTest.getSamplingTargets(UnsignedXrayClientTest.java:245)
+
+CentralizedRuleTest > testPositiveSampleTake FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testPositiveSampleTake(CentralizedRuleTest.java:51)
+
+CentralizedRuleTest > testRuleUpdateWithInvalidation FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testRuleUpdateWithInvalidation(CentralizedRuleTest.java:226)
+
+CentralizedRuleTest > testExpiredReservoirPositiveBernoulliSample FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testExpiredReservoirPositiveBernoulliSample(CentralizedRuleTest.java:98)
+
+CentralizedRuleTest > testRuleUpdateWithoutInvalidation FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testRuleUpdateWithoutInvalidation(CentralizedRuleTest.java:242)
+
+CentralizedRuleTest > testPositiveBernoulliSample FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testPositiveBernoulliSample(CentralizedRuleTest.java:73)
+
+CentralizedRuleTest > testExpiredReservoirNegativeBernoulliSample FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testExpiredReservoirNegativeBernoulliSample(CentralizedRuleTest.java:146)
+
+CentralizedRuleTest > testTargetUpdate FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testTargetUpdate(CentralizedRuleTest.java:258)
+
+CentralizedRuleTest > testNegativeSample FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testNegativeSample(CentralizedRuleTest.java:124)
+
+CentralizedRuleTest > testReservoirReset FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testReservoirReset(CentralizedRuleTest.java:170)
+
+CentralizedRuleTest > testSnapshot FAILED
+    java.lang.NullPointerException: Null attributes
+        at com.amazonaws.xray.strategy.sampling.AutoValue_GetSamplingRulesResponse_SamplingRule.<init>(AutoValue_GetSamplingRulesResponse_SamplingRule.java:52)
+        at com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse$SamplingRule.create(GetSamplingRulesResponse.java:76)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:277)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.createInput(CentralizedRuleTest.java:272)
+        at com.amazonaws.xray.strategy.sampling.rule.CentralizedRuleTest.testSnapshot(CentralizedRuleTest.java:194)
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.powermock.reflect.internal.WhiteboxImpl (file:/Users/lukezha/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-reflect/2.0.7/9a8b85397c5a72923962ee9e6bf774e8458803bb/powermock-reflect-2.0.7.jar) to method java.util.concurrent.locks.ReentrantLock.getOwner()
+WARNING: Please consider reporting this to the maintainers of org.powermock.reflect.internal.WhiteboxImpl
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+277 tests completed, 32 failed
+
+> Task :aws-xray-recorder-sdk-core:test FAILED
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':aws-xray-recorder-sdk-core:compileTestJava'.
-> Compilation failed; see the compiler error output for details.
+Execution failed for task ':aws-xray-recorder-sdk-core:test'.
+> There were failing tests. See the report at: file:///Users/lukezha/github/xray-sdk/aws-xray-sdk-java-2.18.199/aws-xray-recorder-sdk-core/build/reports/tests/test/index.html
 
 * Try:
 > Run with --stacktrace option to get the stack trace.
@@ -474,5 +677,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 See https://docs.gradle.org/7.4.2/userguide/command_line_interface.html#sec:command_line_warnings
 
-BUILD FAILED in 1s
-187 actionable tasks: 18 executed, 169 up-to-date
+BUILD FAILED in 20s
+192 actionable tasks: 20 executed, 172 up-to-date

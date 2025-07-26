@@ -26,9 +26,9 @@ import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static com.github.tomakehurst.wiremock.client.WireMock.verify;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
+import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static java.util.Arrays.asList;
 
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
