@@ -15,8 +15,6 @@
 
 package com.amazonaws.xray.internal;
 
-// import com.amazonaws.AmazonWebServiceRequest;
-// import com.amazonaws.AmazonWebServiceResult;
 import com.amazonaws.xray.config.DaemonConfiguration;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.databind.PropertyName;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.introspect.Annotated;
-import com.fasterxml.jackson.databind.introspect.AnnotatedMember;
 import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import java.io.ByteArrayOutputStream;
@@ -66,24 +63,6 @@ public class UnsignedXrayClient {
             .setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE)
             .registerModule(new SimpleModule().addDeserializer(Date.class, new FloatDateDeserializer()))
             .setAnnotationIntrospector(new JacksonAnnotationIntrospector() {
-                @Override
-                public boolean hasIgnoreMarker(AnnotatedMember m) {
-                    // This is a somewhat hacky way of having ObjectMapper only serialize the fields in our
-                    // model classes instead of the base class that comes from the SDK. In the future, we will
-                    // remove the SDK dependency itself and the base classes and this hack will go away.
-                    // if (m.getDeclaringClass() == AmazonWebServiceRequest.class ||
-                    //     m.getDeclaringClass() == AmazonWebServiceResult.class) {
-                    //     return true;
-                    // }
-                    // Ignore AWS SDK v2 classes (they are under software.amazon.awssdk.*)
-                    Package declaringPackage = m.getDeclaringClass().getPackage();
-                    if (declaringPackage != null &&
-                        declaringPackage.getName().startsWith("software.amazon.awssdk.")) {
-                        return true;
-                    }
-                    return super.hasIgnoreMarker(m);
-                }
-
                 @Override
                 public PropertyName findNameForDeserialization(Annotated a) {
                     if (a.getName().equals("hTTPMethod")) {
