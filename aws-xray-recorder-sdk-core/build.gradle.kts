@@ -1,30 +1,15 @@
-import nebula.plugin.release.git.opinion.Strategies
-import net.ltgt.gradle.errorprone.errorprone
-import nl.javadude.gradle.plugins.license.LicenseExtension
-import org.checkerframework.gradle.plugin.CheckerFrameworkExtension
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-
 plugins {
     `java-library`
     `maven-publish`
-    id("net.ltgt.errorprone")
 }
 
 dependencies {
-    // api("com.amazonaws:aws-java-sdk-xray:1.12.767")
-    // api("software.amazon.awssdk:apache-client:2.32.0")
-    // api("software.amazon.awssdk:aws-core:2.32.0")
-    // api("software.amazon.awssdk:xray:2.32.0")
-
     implementation("com.google.auto.value:auto-value-annotations:1.10.4")
     implementation("com.google.auto.service:auto-service-annotations:1.1.1")
 
     annotationProcessor("com.google.auto.service:auto-service:1.1.1")
     testImplementation("com.google.auto.service:auto-service:1.1.1")
     annotationProcessor("com.google.auto.value:auto-value:1.10.4")
-
-    // annotationProcessor("com.google.errorprone:error_prone_core:2.4.0")
-    // errorprone("com.google.errorprone:error_prone_core")
 
     annotationProcessor("com.google.errorprone:error_prone_core:2.24.1")
     errorprone("com.google.errorprone:error_prone_core:2.24.1")
@@ -53,57 +38,5 @@ tasks.jar {
         attributes("Automatic-Module-Name" to "com.amazonaws.xray.sdk_core")
     }
 }
-
-
-// tasks {
-//     withType<JavaCompile> {
-//         // options.compilerArgs.addAll(listOf(
-//         //     "-Astubs=" // Disable checker framework
-//         // ))
-
-//         options.compilerArgs.addAll(listOf(
-//             "-Asuppress=override.param.invalid"
-//         ))
-
-//         options.errorprone {
-//             error(
-//             )
-
-//             disable(
-//                 "EmptyBlockTag",
-//                 "MissingSummary",
-//                 "MissingOverride",
-//                 "StringSplitter",
-//                 "AutoValueImmutableFields"
-//             )
-
-//                         // Exclude generated sources
-//             excludedPaths.set("./build/generated/.*")
-//         }
-//     }
-// }
-
-
-tasks {
-    withType<JavaCompile> {
-        options.compilerArgs.addAll(listOf(
-            "-AskipDirs=${buildDir}/generated"
-        ))
-        
-        options.errorprone {
-            error(
-            )
-
-            disable(
-                "EmptyBlockTag",
-                "MissingSummary",
-                "MissingOverride",
-                "StringSplitter",
-            )
-        }
-    }
-}
-
-
 
 description = "AWS X-Ray Recorder SDK for Java - Core"

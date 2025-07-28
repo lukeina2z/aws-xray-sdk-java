@@ -18,6 +18,8 @@ package com.amazonaws.xray.strategy.sampling.pollers;
 import com.amazonaws.xray.internal.UnsignedXrayClient;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesRequest;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRuleRecord;
 import com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifest;
 import com.amazonaws.xray.strategy.sampling.rand.Rand;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
@@ -95,9 +97,9 @@ public class RulePoller {
         logger.info("Polling sampling rules.");
         GetSamplingRulesRequest req = GetSamplingRulesRequest.create(null);
         GetSamplingRulesResponse records = client.getSamplingRules(req);
-        List<GetSamplingRulesResponse.SamplingRule> rules = records.getSamplingRules()
+        List<SamplingRule> rules = records.getSamplingRules()
                 .stream()
-                .map(GetSamplingRulesResponse.SamplingRuleRecord::getRule)
+                .map(SamplingRuleRecord::getRule)
                 .filter(CentralizedRule::isValid)
                 .collect(Collectors.toList());
 

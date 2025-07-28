@@ -16,7 +16,7 @@
 package com.amazonaws.xray.strategy.sampling.manifest;
 
 import com.amazonaws.xray.strategy.sampling.CentralizedSamplingStrategy;
-import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
@@ -89,14 +89,14 @@ public class CentralizedManifest implements Manifest {
         return defaultRule;
     }
 
-    public void putRules(List<GetSamplingRulesResponse.SamplingRule> inputs, Instant now) {
+    public void putRules(List<SamplingRule> inputs, Instant now) {
         // Set to true if we see a new or deleted rule or a change in the priority of an existing rule.
         boolean invalidate = false;
 
         Map<String, CentralizedRule> rules = this.rules;
         List<String> inputNames = new ArrayList<>(inputs.size());
 
-        for (GetSamplingRulesResponse.SamplingRule i : inputs) {
+        for (SamplingRule i : inputs) {
             if (i.getRuleName().equals(CentralizedRule.DEFAULT_RULE_NAME)) {
                 putDefaultRule(i);
             } else {
@@ -182,7 +182,7 @@ public class CentralizedManifest implements Manifest {
         }
     }
 
-    private boolean putCustomRule(Map<String, CentralizedRule> rules, GetSamplingRulesResponse.SamplingRule i) {
+    private boolean putCustomRule(Map<String, CentralizedRule> rules, SamplingRule i) {
         CentralizedRule r = rules.get(i.getRuleName());
         if (r == null) {
             return true;
@@ -191,7 +191,7 @@ public class CentralizedManifest implements Manifest {
         return r.update(i);
     }
 
-    private void putDefaultRule(GetSamplingRulesResponse.SamplingRule i) {
+    private void putDefaultRule(SamplingRule i) {
         if (defaultRule == null) {
             defaultRule = new CentralizedRule(i, new RandImpl());
         } else {
@@ -200,10 +200,10 @@ public class CentralizedManifest implements Manifest {
     }
 
     LinkedHashMap<String, CentralizedRule> rebuild(Map<String, CentralizedRule> old,
-        List<GetSamplingRulesResponse.SamplingRule> inputs) {
+        List<SamplingRule> inputs) {
         List<CentralizedRule> rules = new ArrayList<>(inputs.size() - 1);
 
-        for (GetSamplingRulesResponse.SamplingRule i : inputs) {
+        for (SamplingRule i : inputs) {
             if (i.getRuleName().equals(CentralizedRule.DEFAULT_RULE_NAME)) {
                 continue;
             }
