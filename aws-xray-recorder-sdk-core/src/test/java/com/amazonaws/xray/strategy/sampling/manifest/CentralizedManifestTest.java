@@ -16,7 +16,7 @@
 package com.amazonaws.xray.strategy.sampling.manifest;
 
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
-import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
 import com.amazonaws.xray.strategy.sampling.rule.CentralizedRule;
@@ -269,7 +269,7 @@ class CentralizedManifestTest {
         rules.forEach((key, r) -> r.sample(now));
         defaultRule.sample(now);
 
-        List<GetSamplingTargetsRequest.SamplingStatisticsDocument> snapshots = m.snapshots(now);
+        List<SamplingStatisticsDocument> snapshots = m.snapshots(now);
 
         Assertions.assertEquals(3, snapshots.size());
     }
@@ -289,7 +289,7 @@ class CentralizedManifestTest {
         Map<String, CentralizedRule> rules = Whitebox.getInternalState(m, "rules", CentralizedManifest.class);
         rules.forEach((key, r) -> r.sample(now));
 
-        List<GetSamplingTargetsRequest.SamplingStatisticsDocument> snapshots = m.snapshots(now);
+        List<SamplingStatisticsDocument> snapshots = m.snapshots(now);
 
         Assertions.assertEquals(2, snapshots.size());
     }

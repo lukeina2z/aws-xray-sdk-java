@@ -17,6 +17,7 @@ package com.amazonaws.xray.strategy.sampling.pollers;
 
 import com.amazonaws.xray.internal.UnsignedXrayClient;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.manifest.CentralizedManifest;
 import com.amazonaws.xray.strategy.sampling.rand.Rand;
@@ -86,7 +87,7 @@ public class TargetPoller {
     }
 
     private void pollManifest() {
-        List<GetSamplingTargetsRequest.SamplingStatisticsDocument> statistics = manifest.snapshots(clock.instant());
+        List<SamplingStatisticsDocument> statistics = manifest.snapshots(clock.instant());
         if (statistics.size() == 0) {
             logger.trace("No statistics to report. Not refreshing sampling targets.");
             return;

@@ -17,7 +17,6 @@ package com.amazonaws.xray.strategy.sampling.manifest;
 
 import com.amazonaws.xray.strategy.sampling.CentralizedSamplingStrategy;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
-import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
@@ -145,7 +144,7 @@ public class CentralizedManifest implements Manifest {
         }
 
         if (defaultRule != null && defaultRule.isStale(now)) {
-            GetSamplingTargetsRequest.SamplingStatisticsDocument snapshot = defaultRule.snapshot(date);
+            SamplingStatisticsDocument snapshot = defaultRule.snapshot(date);
             snapshot = SamplingStatisticsDocument.newBuilder()
                     .setSampledCount(snapshot.getSampledCount())
                     .setBorrowCount(snapshot.getBorrowCount())

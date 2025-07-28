@@ -245,7 +245,7 @@ public class UnsignedXrayClientTest {
                                                  .withBody(SAMPLING_TARGETS)));
 
         List<SamplingStatisticsDocument> documents = asList(
-            GetSamplingTargetsRequest.SamplingStatisticsDocument.newBuilder().setClientId("client-id")
+            SamplingStatisticsDocument.newBuilder().setClientId("client-id")
                     .setBorrowCount(3)
                     .setRequestCount(0)
                     .setRuleName("rule-foo")

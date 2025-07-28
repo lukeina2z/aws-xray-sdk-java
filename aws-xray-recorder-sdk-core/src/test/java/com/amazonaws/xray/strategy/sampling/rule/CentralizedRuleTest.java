@@ -16,7 +16,7 @@
 package com.amazonaws.xray.strategy.sampling.rule;
 
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
-import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse.SamplingTargetDocument;
 import com.amazonaws.xray.strategy.sampling.SamplingResponse;
 import com.amazonaws.xray.strategy.sampling.rand.Rand;
@@ -206,7 +206,7 @@ public class CentralizedRuleTest {
         Assert.assertEquals(1, s.getRequests());
         Assert.assertEquals(0, s.getBorrowed());
 
-        GetSamplingTargetsRequest.SamplingStatisticsDocument snapshot = rule.snapshot(Date.from(clock.instant()));
+        SamplingStatisticsDocument snapshot = rule.snapshot(Date.from(clock.instant()));
 
         // Assert snapshot contains expected statistics
         Assert.assertEquals("r1", snapshot.getRuleName());
