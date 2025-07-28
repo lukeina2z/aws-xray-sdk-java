@@ -123,8 +123,13 @@ allprojects {
             excludeTests = true
 
             // TODO(anuraaga): Enable on all projects.
-            // skipCheckerFramework = project.name != "aws-xray-recorder-sdk-core" || JavaVersion.current() != JavaVersion.VERSION_11
-            skipCheckerFramework = true
+            skipCheckerFramework = project.name != "aws-xray-recorder-sdk-core" || JavaVersion.current() != JavaVersion.VERSION_11
+
+            // Two reasons we cannot run the Nullness Checker on aws-xray-recorder-sdk-core:
+            // 1. Google AutoValue does not generate @Nullable or @NonNull annotations on methods like equals() and hashCode().
+            // 2. The existing codebase does not consistently perform null checks, in line with the behavior of the X-Ray SDK:
+            //    https://docs.aws.amazon.com/xray/latest/api/API_SamplingTargetDocument.html
+            skipCheckerFramework = skipCheckerFramework || project.name == "aws-xray-recorder-sdk-core"
         }
 
         dependencies {
@@ -147,7 +152,6 @@ allprojects {
             if (!JavaVersion.current().isJava9Compatible) {
                 add("errorproneJavac", "com.google.errorprone:javac:9+181-r4173-1")
             }
-            // add("errorprone", "com.uber.nullaway:nullaway:0.10.10")
 
             configurations.configureEach {
                 if (isCanBeResolved && !isCanBeConsumed) {

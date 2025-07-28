@@ -16,7 +16,7 @@
 package com.amazonaws.xray.strategy.sampling.rule;
 
 import com.amazonaws.xray.entities.SearchPattern;
-import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import java.util.Collections;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Matchers {
 
     private String serviceType;
 
-    public Matchers(GetSamplingRulesResponse.SamplingRule r) {
+    public Matchers(SamplingRule r) {
         this.host = r.getHost();
         this.service = r.getServiceName();
         this.method = r.getHttpMethod();

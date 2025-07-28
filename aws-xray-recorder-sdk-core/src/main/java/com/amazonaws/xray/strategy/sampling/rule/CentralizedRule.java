@@ -15,7 +15,7 @@
 
 package com.amazonaws.xray.strategy.sampling.rule;
 
-import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
@@ -65,7 +65,7 @@ public class CentralizedRule implements Rule, Comparable<CentralizedRule> {
 
     private final ReadWriteLock lock;
 
-    public CentralizedRule(GetSamplingRulesResponse.SamplingRule input, Rand rand) {
+    public CentralizedRule(SamplingRule input, Rand rand) {
         this.name = input.getRuleName();
         this.centralizedReservoir = new CentralizedReservoir(input.getReservoirSize());
         this.fixedRate = input.getFixedRate();
@@ -80,7 +80,7 @@ public class CentralizedRule implements Rule, Comparable<CentralizedRule> {
         this.lock = new ReentrantReadWriteLock();
     }
 
-    public boolean update(GetSamplingRulesResponse.SamplingRule i) {
+    public boolean update(SamplingRule i) {
         boolean rebuild = false;
         Matchers m = new Matchers(i);
 
@@ -112,7 +112,7 @@ public class CentralizedRule implements Rule, Comparable<CentralizedRule> {
         }
     }
 
-    public static boolean isValid(GetSamplingRulesResponse.SamplingRule rule) {
+    public static boolean isValid(SamplingRule rule) {
         if (rule.getRuleName() == null || rule.getPriority() == null
                 || rule.getReservoirSize() == null || rule.getFixedRate() == null || rule.getVersion() != 1) {
 
