@@ -17,7 +17,7 @@ package com.amazonaws.xray.strategy.sampling.rule;
 
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
-import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse.SamplingTargetDocument;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import com.amazonaws.xray.strategy.sampling.SamplingResponse;
 import com.amazonaws.xray.strategy.sampling.rand.Rand;
@@ -138,7 +138,7 @@ public class CentralizedRule implements Rule, Comparable<CentralizedRule> {
         return true;
     }
 
-    public void update(GetSamplingTargetsResponse.SamplingTargetDocument t, Instant now) {
+    public void update(SamplingTargetDocument t, Instant now) {
         lock.writeLock().lock();
         try {
             centralizedReservoir.update(t, now);

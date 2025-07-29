@@ -18,7 +18,7 @@ package com.amazonaws.xray.strategy.sampling.manifest;
 import com.amazonaws.xray.strategy.sampling.CentralizedSamplingStrategy;
 import com.amazonaws.xray.strategy.sampling.GetSamplingRulesResponse.SamplingRule;
 import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsRequest.SamplingStatisticsDocument;
-import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse;
+import com.amazonaws.xray.strategy.sampling.GetSamplingTargetsResponse.SamplingTargetDocument;
 import com.amazonaws.xray.strategy.sampling.SamplingRequest;
 import com.amazonaws.xray.strategy.sampling.rand.RandImpl;
 import com.amazonaws.xray.strategy.sampling.rule.CentralizedRule;
@@ -161,10 +161,10 @@ public class CentralizedManifest implements Manifest {
         return snapshots;
     }
 
-    public void putTargets(List<GetSamplingTargetsResponse.SamplingTargetDocument> targets, Instant now) {
+    public void putTargets(List<SamplingTargetDocument> targets, Instant now) {
         Map<String, CentralizedRule> rules = this.rules;
 
-        for (GetSamplingTargetsResponse.SamplingTargetDocument t : targets) {
+        for (SamplingTargetDocument t : targets) {
             CentralizedRule r = null;
 
             if (rules.containsKey(t.getRuleName())) {
