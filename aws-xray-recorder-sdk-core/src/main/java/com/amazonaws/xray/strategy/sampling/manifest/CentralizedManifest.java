@@ -198,8 +198,7 @@ public class CentralizedManifest implements Manifest {
         }
     }
 
-    LinkedHashMap<String, CentralizedRule> rebuild(Map<String, CentralizedRule> old,
-        List<SamplingRule> inputs) {
+    LinkedHashMap<String, CentralizedRule> rebuild(Map<String, CentralizedRule> old, List<SamplingRule> inputs) {
         List<CentralizedRule> rules = new ArrayList<>(inputs.size() - 1);
 
         for (SamplingRule i : inputs) {
