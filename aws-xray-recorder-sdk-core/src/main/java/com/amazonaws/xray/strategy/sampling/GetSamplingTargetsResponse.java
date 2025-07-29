@@ -62,8 +62,7 @@ public abstract class GetSamplingTargetsResponse {
         @Nullable
         public abstract Integer getReservoirQuota();
 
-        // Careful that this is a timestamp when the quota expires, not a duration as
-        // we'd normally
+        // Careful that this is a timestamp when the quota expires, not a duration as we'd normally
         // expect for a Time to live.
         @Nullable
         public abstract Date getReservoirQuotaTtl();
